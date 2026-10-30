@@ -5,19 +5,27 @@ import ClosingCTA from '../components/ClosingCTA.astro';
 import FAQList from '../components/FAQList.astro';
 import { locationGroups } from '../data/locations';
 import { faqs } from '../data/faqs';
+import { localBusinessSchema, faqSchema } from '../utils/schema';
 ---
-<MarketingLayout title="Area Layanan" description="Cakupan layanan untuk UMKM di Jawa Timur, perbedaan layanan remote dan onsite, serta cara mengonfirmasi ketersediaan."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Area Layanan' }]}>
-  <PageHero title="Area layanan di Jawa Timur" lead="Layanan ditujukan bagi UMKM di Jawa Timur. Daftar di bawah adalah wilayah yang dapat dibahas; ketersediaan dikonfirmasi saat konsultasi." />
+<MarketingLayout
+  title="Area Layanan UMKM Digital Jawa Timur (38 Kab/Kota)"
+  description="Cakupan layanan pemasaran digital untuk UMKM di 38 kabupaten dan kota se-Jawa Timur. Layanan konsultasi online dan kunjungan onsite terkonfirmasi."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Area Layanan' }]}
+  schema={[
+    localBusinessSchema(),
+    faqSchema(faqs.filter((f) => f.group === 'Lokasi'))
+  ]}
+>
+  <PageHero title="Jangkauan Layanan di Seluruh Jawa Timur" lead="Kami melayani pelaku UMKM di 38 kabupaten dan kota se-Jawa Timur. Layanan online tersedia penuh, sementara layanan tatap muka onsite disesuaikan dengan kesepakatan jadwal tim." />
   <section class="section"><div class="container cols-2">
-    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan jarak jauh</h2><p class="muted">Konsultasi, perencanaan, dan banyak pekerjaan digital dapat dilakukan tanpa bertemu langsung.</p></div>
-    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan onsite</h2><p class="muted">Pekerjaan yang butuh kehadiran, seperti pengambilan gambar, bergantung pada ketersediaan. Biaya perjalanan dapat berlaku.</p></div>
+    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Online / Jarak Jauh</h2><p class="muted">Pembuatan website, optimasi marketplace, pengelolaan medsos, dan kampanye iklan dapat berjalan lancar via WhatsApp dan pertemuan online berkala.</p></div>
+    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Onsite / Hadir Langsung</h2><p class="muted">Khusus untuk sesi rekaman video produk di lokasi, setup studio siaran langsung, atau pendampingan tim kerja sesuai konfirmasi wilayah.</p></div>
   </div></section>
   <section class="section section--tint"><div class="container">
-    <h2 style="margin-bottom:.75rem">Daftar wilayah</h2>
-    <p class="muted" style="margin-bottom:2rem;max-width:40rem">Daftar ini menunjukkan cakupan, bukan lokasi kantor. Kami tidak memiliki kantor di setiap kota.</p>
+    <h2 style="margin-bottom:.75rem">Cakupan Wilayah Jawa Timur</h2>
+    <p class="muted" style="margin-bottom:2rem;max-width:40rem">Area pendampingan UMKM kami mencakup seluruh wilayah berikut, baik melalui konsultasi daring maupun kunjungan terjadwal.</p>
     <div class="cols-3">{locationGroups.map((g) => (<div class="panel"><h3>{g.name}</h3><div class="tags">{g.places.map((p) => <span class="tag">{p}</span>)}</div></div>))}</div>
   </div></section>
-  <section class="section"><div class="container split"><h2>FAQ area layanan</h2><FAQList items={faqs.filter((f) => f.group === 'Lokasi')} /></div></section>
-  <ClosingCTA title="Cek ketersediaan di wilayah Anda" message="Halo, saya ingin mengecek ketersediaan layanan di wilayah saya." secondaryLabel="Lihat layanan" />
+  <section class="section"><div class="container split"><h2>Pertanyaan Seputar Jangkauan Wilayah</h2><FAQList items={faqs.filter((f) => f.group === 'Lokasi')} /></div></section>
+  <ClosingCTA title="Cek Ketersediaan Layanan di Kota Anda" message="Halo, saya ingin menanyakan ketersediaan layanan UMKM Digital untuk wilayah saya." secondaryLabel="Lihat layanan" />
 </MarketingLayout>

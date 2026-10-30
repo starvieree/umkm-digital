@@ -3,7 +3,11 @@ const { service, index, withImage = false } = Astro.props;
 const href = `/layanan/${service.slug}/`;
 ---
 <article class="service-card cell">
-  {withImage && <img src={`/images/services/${service.slug}.webp`} alt={service.name} width="600" height="400" loading="lazy" />}
+  {withImage && (
+    <a href={href} class="service-img-wrap" tabindex="-1" aria-hidden="true">
+      <img src={`/images/services/${service.slug}.webp`} alt={service.name} width="600" height="400" loading="lazy" class="service-img" />
+    </a>
+  )}
   <span class="idx mono">{String(index + 1).padStart(2, '0')}</span>
   <h3><a class="title-link" href={href}>{service.name}</a></h3>
   <p>{service.short}</p>

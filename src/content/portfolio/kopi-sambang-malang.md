@@ -9,24 +9,21 @@ author: "Tim UMKM Digital"
 draft: false
 ---
 
-### Profil Klien
-**Kopi Sambang** adalah usaha mikro sangrai kopi (*micro-roastery*) dan kedai kopi lokal yang berbasis di Malang, Jawa Timur. Berdiri sejak tahun 2021, Kopi Sambang memproduksi berbagai varian biji kopi asli petani Jawa Timur (Dampit, Arjuno, dan Ijen) dalam bentuk biji sangrai (*whole beans*) dan bubuk siap seduh.
+### Profil Klien & Masalah
+**Kopi Sambang** (Malang) adalah usaha sangrai kopi (*micro-roastery*) dan kedai lokal dengan biji kopi petani Dampit, Arjuno, dan Ijen. Sebelumnya, katalog hanya berupa file PDF manual yang dikirim via WhatsApp. Dampaknya: admin kewalahan melayani pertanyaan stok/profil rasa yang berulang, profil usaha kurang meyakinkan saat mengajukan kerja sama pasokan B2B ke kafe, serta belum muncul di pencarian Google.
 
-### Masalah yang Dihadapi
-Sebelumnya, Kopi Sambang hanya mengandalkan profil Instagram dan pengiriman daftar menu manual dalam bentuk PDF via WhatsApp chat. Hal ini menimbulkan sejumlah kendala:
-1. **Informasi Produk Tidak Rapi**: Calon pelanggan sering menanyakan ketersediaan stok, profil rasa (*tasting notes*), dan level sangrai berulang kali.
-2. **Kredibilitas untuk Kerja Sama B2B**: Saat mengajukan penawaran pasokan kopi ke kafe dan hotel mitra, Kopi Sambang belum memiliki situs web resmi yang memperkuat citra profesional.
-3. **Pencarian Google Lokal**: Konsumen kopi di Malang dan wisatawan yang mencari *"roastery kopi lokal Malang"* kesulitan menemukan profil usaha mereka di Google.
+### Apa yang Dikerjakan
+- Membangun website profil bisnis resmi dan responsif yang sangat ringan (waktu muat < 1 detik).
+- Merancang katalog varian produk interaktif dengan filter level sangrai (*light, medium, dark*) dan proses pascapanen.
+- Menghubungkan setiap produk langsung ke tombol pesanan WhatsApp dengan draf pesan otomatis.
+- Mengatur SEO lokal dan Google Profil Bisnis untuk kata kunci roastery kopi Malang.
 
-### Solusi & Ruang Lingkup Pekerjaan
-UMKM Digital merancang dan membangun website resmi yang ringan, modern, dan sangat nyaman dibuka di perangkat *smartphone*:
-- **Halaman Profil Usaha (*About Us*)**: Menceritakan asal-usul kopi, kemitraan dengan petani lokal Malang, dan komitmen mutu sangrai.
-- **Katalog Varian Produk Interaktif**: Menampilkan daftar biji kopi lengkap dengan filter level sangrai (*light, medium, dark*), proses pascapanen (*natural, washed, honey*), dan catatan rasa.
-- **Tombol Pesan Langsung ke WhatsApp**: Setiap produk memiliki tombol *"Pesan via WhatsApp"* yang otomatis mengisi pesan berisi nama produk dan varian yang dipilih pelanggan.
-- **Optimasi SEO Dasar & Google Maps**: Mendaftarkan sitemap, schema markup organisasi lokal, dan mengoptimalkan kata kunci pencarian seputar roastery kopi Jawa Timur.
+### Bagaimana Pengerjaannya
+- **Riset Menu & Penyusunan Konten**: Mengorganisir informasi asal-usul biji kopi, profil rasa (*tasting notes*), dan foto produk agar mudah dipahami pembeli baru maupun penikmat kopi.
+- **Pengembangan Mobile-First yang Ringan**: Website dibangun tanpa beban plugin berat sehingga sangat cepat diakses dari ponsel sekalipun dengan sinyal terbatas.
+- **Integrasi Tombol WhatsApp Otomatis**: Tombol pesan otomatis mencantumkan nama produk, jenis gilingan (*whole beans / coarse / fine*), dan jumlah pesanan saat chat terbuka.
 
-### Hasil & Dampak
-Setelah website resmi diluncurkan:
-- Efisiensi admin penjualan meningkat karena pelanggan langsung memilih produk dari katalog sebelum menghubungi WhatsApp.
-- Kopi Sambang berhasil mengamankan 4 kontrak pasokan biji kopi rutin ke *coffee shop* baru berkat profil bisnis yang kredibel.
-- Waktu muat (*load time*) website di bawah 1 detik, memastikan pengunjung di jaringan seluler dapat mengakses menu tanpa hambatan.
+### Hasil yang Didapat
+- Admin penjualan jauh lebih hemat waktu karena pembeli datang sudah memilih varian dari katalog web.
+- Berhasil mengamankan 4 kontrak kerja sama baru untuk pasokan rutin biji kopi ke kafe-kafe lokal.
+- Kredibilitas brand meningkat dan mudah ditemukan pelanggan baru melalui pencarian Google lokal.

@@ -4,14 +4,19 @@ import PageHero from '../components/PageHero.astro';
 import FAQList from '../components/FAQList.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { faqs } from '../data/faqs';
+import { faqSchema } from '../utils/schema';
 const groups = [...new Set(faqs.map((f) => f.group))];
 ---
-<MarketingLayout title="FAQ" description="Jawaban atas pertanyaan umum tentang layanan, harga, proses kerja, dan area layanan."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'FAQ' }]}>
-  <PageHero title="Pertanyaan yang sering diajukan" lead="Jawaban singkat sebelum Anda menghubungi kami." />
+<MarketingLayout
+  title="Tanya Jawab & FAQ Pemasaran UMKM Digital Jawa Timur"
+  description="Jawaban lengkap atas pertanyaan seputar layanan pemasaran digital, estimasi biaya, alur kerja, dan area layanan UMKM Jawa Timur."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'FAQ' }]}
+  schema={[faqSchema(faqs)]}
+>
+  <PageHero title="Pertanyaan yang Sering Diajukan (FAQ)" lead="Informasi lengkap dan ringkas seputar pilihan layanan, estimasi biaya, alur kerja sama, serta jangkauan area kami." />
   <section class="section"><div class="container" style="max-width:52rem">
     <nav aria-label="Kategori FAQ" class="tags">{groups.map((g) => <a class="tag" href={`#${g.toLowerCase()}`}>{g}</a>)}</nav>
     {groups.map((g) => (<div class="faq-group" id={g.toLowerCase()}><h2>{g}</h2><FAQList items={faqs.filter((f) => f.group === g)} /></div>))}
   </div></section>
-  <ClosingCTA title="Pertanyaan Anda belum terjawab?" secondaryHref="/kontak/" secondaryLabel="Halaman kontak" />
+  <ClosingCTA title="Pertanyaan Anda Belum Terjawab di Sini?" text="Tanyakan langsung kendala atau kebutuhan bisnis Anda kepada tim konsultan kami via WhatsApp." secondaryHref="/kontak/" secondaryLabel="Halaman kontak" />
 </MarketingLayout>

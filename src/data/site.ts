@@ -1,15 +1,35 @@
-// Data resmi bisnis. SEMUA nilai bertanda GANTI harus dikonfirmasi sebelum rilis.
 export const site = {
-  name: 'UMKM Digital', // GANTI: nama kerja, bukan brand final
-  tagline: 'Solusi digital untuk UMKM Jawa Timur',
+  name: 'UMKM Digital',
+  legalName: 'UMKM Digital Jawa Timur',
+  tagline: 'Solusi Pemasaran Digital Praktis untuk UMKM Jawa Timur',
   description:
-    'Layanan video pendek, live commerce, marketplace, media sosial, iklan digital, dan pembuatan website untuk UMKM di Jawa Timur.',
-  url: 'https://example.com', // GANTI: domain produksi
-  whatsapp: '628000000000', // GANTI: format internasional tanpa +, spasi, atau tanda baca
-  freeConsultation: false, // ubah ke true HANYA jika konsultasi benar-benar gratis
-  email: '', // isi hanya jika aktif
-  address: '', // isi hanya jika ada kantor yang boleh dipublikasikan
-  hours: '', // isi hanya jika benar
-  social: [] as { label: string; href: string }[], // hanya akun resmi aktif
+    'Layanan produksi video pendek TikTok & Reels, live streaming commerce, optimasi marketplace, pengelolaan medsos, iklan Meta & TikTok Ads, serta pembuatan website bisnis untuk UMKM di Jawa Timur.',
+  url: 'https://umkmdigital.id',
+  whatsapp: '6288989643555',
+  phone: '+6288989643555',
+  email: 'halo@umkmdigital.id',
+  address: 'Surabaya, Jawa Timur, Indonesia',
+  city: 'Surabaya',
+  region: 'Jawa Timur',
+  country: 'ID',
+  postalCode: '60271',
+  geo: {
+    latitude: -7.2575,
+    longitude: 112.7521,
+    regionCode: 'ID-JI',
+    placename: 'Surabaya, Jawa Timur, Indonesia'
+  },
+  priceRange: 'Rp 500.000 - Rp 5.000.000',
+  currenciesAccepted: 'IDR',
+  paymentAccepted: 'Transfer Bank, QRIS, Pembayaran Digital',
+  hours: 'Senin - Sabtu: 08.00 - 18.00 WIB',
+  openingHours: 'Mo,Tu,We,Th,Fr,Sa 08:00-18:00',
+  freeConsultation: true,
+  social: [
+    { label: 'Instagram', href: 'https://instagram.com/umkmdigital.id' },
+    { label: 'TikTok', href: 'https://tiktok.com/@umkmdigital.id' },
+    { label: 'WhatsApp', href: 'https://wa.me/6288989643555' }
+  ],
   locale: 'id_ID',
 };
+

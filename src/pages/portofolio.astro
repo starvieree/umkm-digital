@@ -4,14 +4,26 @@ import PageHero from '../components/PageHero.astro';
 import PortfolioCard from '../components/PortfolioCard.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { getCollection } from 'astro:content';
+import { portfolioSchema } from '../utils/schema';
 const items = (await getCollection('portfolio', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-<MarketingLayout title="Portofolio" description="Contoh pekerjaan dan studi kasus layanan digital untuk UMKM."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Portofolio' }]}>
-  <PageHero title="Portofolio dan studi kasus" lead="Contoh pekerjaan yang sudah mendapat izin untuk dipublikasikan." />
+<MarketingLayout
+  title="Portofolio & Studi Kasus Pemasaran UMKM Jawa Timur"
+  description="Bukti pekerjaan nyata dan studi kasus hasil pendampingan pemasaran digital bagi UMKM di Surabaya, Malang, Sidoarjo, Madiun, Pasuruan, dan Mojokerto."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Portofolio' }]}
+  schema={items.map((e) => portfolioSchema({
+    title: e.data.title,
+    description: e.data.description,
+    path: `/portofolio/${e.slug}/`,
+    category: e.data.category,
+    pubDate: e.data.pubDate,
+    image: e.data.coverImage
+  }))}
+>
+  <PageHero title="Portofolio & Bukti Pengerjaan Nyata" lead="Lihat bagaimana kami mendampingi para pelaku UMKM di Jawa Timur membenahi pemasaran digital dan menghasilkan pesanan baru." />
   <section class="section"><div class="container">
     {items.length ? <div class="matrix">{items.map((e) => <PortfolioCard entry={e} />)}</div>
-      : <p class="empty">Portofolio sedang disiapkan. Kami hanya menampilkan pekerjaan nyata dengan izin publikasi. Anda tetap bisa berkonsultasi tentang proyek serupa.</p>}
+      : <p class="empty">Portofolio sedang diperbarui. Kami hanya mempublikasikan studi kasus riil yang telah mendapat izin tertulis dari pemilik usaha.</p>}
   </div></section>
-  <ClosingCTA title="Diskusikan proyek serupa" secondaryLabel="Lihat layanan" />
+  <ClosingCTA title="Tertarik Mengembangkan Bisnis Serupa?" text="Konsultasikan produk dan target bisnis Anda bersama kami melalui WhatsApp." secondaryLabel="Lihat layanan" />
 </MarketingLayout>

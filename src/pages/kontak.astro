@@ -4,18 +4,29 @@ import PageHero from '../components/PageHero.astro';
 import WhatsAppCTA from '../components/WhatsAppCTA.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { site } from '../data/site';
-const prep = ['Jenis bisnis Anda', 'Kebutuhan atau masalah utama', 'Layanan yang diminati', 'Target waktu pengerjaan', 'Materi pendukung yang sudah ada'];
+import { localBusinessSchema, organizationSchema } from '../utils/schema';
+const prep = [
+  'Jenis produk dan bidang usaha Anda',
+  'Kendala pemasaran utama yang ingin diatasi saat ini',
+  'Layanan yang menurut Anda paling dibutuhkan',
+  'Materi foto/video atau akun bisnis yang sudah dimiliki',
+  'Perkiraan target waktu atau agenda promosi terdekat'
+];
 ---
-<MarketingLayout title="Kontak" description="Hubungi kami lewat WhatsApp untuk konsultasi layanan digital UMKM."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Kontak' }]}>
-  <PageHero title="Hubungi kami" lead="Cara tercepat adalah lewat WhatsApp. Ceritakan kebutuhan Anda dan kami bantu menentukan langkah berikutnya.">
+<MarketingLayout
+  title="Kontak & Konsultasi WhatsApp - UMKM Digital Jawa Timur"
+  description="Hubungi tim UMKM Digital via WhatsApp di 0889-8964-3555 untuk konsultasi pemasaran digital bisnis Anda di Jawa Timur."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Kontak' }]}
+  schema={[localBusinessSchema(), organizationSchema()]}
+>
+  <PageHero title="Konsultasi Langsung dengan Tim Kami" lead="Diskusi santai dan solutif langsung via WhatsApp. Ceritakan produk dan target usaha Anda, kami bantu tentukan langkah pemasaran digital yang paling pas.">
     <div style="margin-top:1.5rem"><WhatsAppCTA /></div>
   </PageHero>
   <section class="section"><div class="container cols-2">
-    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:1rem">Kanal komunikasi</h2>
-      <ul class="checklist"><li>WhatsApp (kanal utama)</li>{site.email && <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>}{site.hours && <li>Jam komunikasi: {site.hours}</li>}{site.address && <li>Alamat: {site.address}</li>}</ul>
+    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:1rem">Kanal Komunikasi Resmi</h2>
+      <ul class="checklist"><li>WhatsApp: <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" style="color:var(--dp-color-accent);font-weight:600">0889-8964-3555</a> (Chat & Konsultasi Langsung)</li>{site.email && <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>}{site.hours && <li>Jam operasional: {site.hours}</li>}{site.address && <li>Wilayah operasional: {site.address}</li>}</ul>
     </div>
-    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:1rem">Siapkan sebelum konsultasi</h2><ul class="checklist">{prep.map((p) => <li>{p}</li>)}</ul></div>
+    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:1rem">Poin yang Membantu Mempercepat Diskusi</h2><ul class="checklist">{prep.map((p) => <li>{p}</li>)}</ul></div>
   </div></section>
-  <ClosingCTA title="Siap berdiskusi?" secondaryLabel="Lihat layanan" />
+  <ClosingCTA title="Siap Meningkatkan Penjualan Usaha Anda?" text="Sampaikan pertanyaan Anda sekarang. Tim kami siap memberikan masukan praktis untuk bisnis Anda." secondaryLabel="Lihat layanan" />
 </MarketingLayout>

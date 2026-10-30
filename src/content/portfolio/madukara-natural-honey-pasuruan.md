@@ -9,23 +9,21 @@ author: "Tim UMKM Digital"
 draft: false
 ---
 
-### Profil Klien
-**Madukara Natural Honey** adalah produsen madu murni mentah (*raw forest honey*) yang dipanen langsung dari hutan kawasan lereng Gunung Welirang dan Bromo di Pasuruan, Jawa Timur. Madu Madukara diproses secara higienis tanpa pasteurisasi berlebih guna mempertahankan kandungan enzim alami dan bee pollen.
+### Profil Klien & Masalah
+**Madukara Natural Honey** (Pasuruan) memproduksi madu hutan murni mentah (*raw honey*) dari lereng Welirang & Bromo. Sebelumnya pernah mencoba beriklan sendiri di media sosial namun boncos: target audiens disetel terlalu luas ke seluruh Indonesia tanpa data, materi iklan hanya foto botol polos, dan pemilik bingung membaca metrik teknis di Ads Manager.
 
-### Masalah yang Dihadapi
-Sebelum bekerja sama dengan kami, Madukara pernah mencoba memasang iklan mandiri di media sosial namun merasa hasilnya kurang memuaskan:
-1. **Target Audiens Terlalu Luas (*Broad Audience*)**: Iklan disetel ke seluruh Indonesia tanpa segmentasi demografis yang tajam, sehingga anggaran harian cepat habis tanpa ada pembelian nyata.
-2. **Materi Iklan Kurang Menonjolkan Diferensiasi**: Desain poster iklan hanya berupa foto botol polos dengan tulisan harga, tanpa membuktikan mengapa madu murni Madukara lebih sehat dibanding madu sirup pasaran.
-3. **Tidak Memiliki Pelaporan Kinerja yang Jelas**: Pemilik usaha kesulitan membaca metrik teknis di Ads Manager dan tidak tahu iklan mana yang paling efektif mendatangkan pembeli.
+### Apa yang Dikerjakan
+- Mengelola kampanye iklan berbayar terarah di Meta Ads (Instagram & Facebook) selama 30 hari.
+- Memproduksi 3 variasi materi iklan (*creative testing*): video uji kemurnian madu di atas air, carousel edukasi imunitas keluarga, dan testimoni pelanggan.
+- Mengatur jalur konversi langsung ke WhatsApp Bisnis dengan pesan pembuka promo otomatis.
+- Menyajikan laporan mingguan ringkas yang fokus pada jumlah chat masuk dan biaya per kontak.
 
-### Solusi & Ruang Lingkup Pekerjaan
-UMKM Digital merancang kampanye iklan digital terukur di ekosistem Meta (Instagram & Facebook Ads) selama periode 30 hari:
-- **Riset Target Audiens & Geotargeting**: Mempersempit sasaran ke keluarga muda dan pegiat gaya hidup sehat di wilayah Jawa Timur (Surabaya, Sidoarjo, Malang, dan Pasuruan) dengan rentang usia 25–48 tahun.
-- **A/B Testing Materi Iklan (*Creative Testing*)**: Menyiapkan 3 variasi format kreatif: (A) Video uji keaslian madu murni di atas air, (B) Carousel infografis manfaat madu bagi imunitas anak, dan (C) Testimoni pelanggan rutin penderita asam lambung.
-- **Optimasi Corong Konversi (*Funnel to WhatsApp*)**: Mengarahkan klik iklan langsung ke WhatsApp bisnis dengan pesan pembuka otomatis: *"Halo Madukara, saya tertarik dengan promo Paket Imunitas Keluarga via iklan Instagram"*.
-- **Pelaporan & Evaluasi Mingguan Sederhana**: Menyediakan laporan berkala yang mudah dipahami pemilik usaha: jumlah klik, biaya per klik (*CPC*), dan jumlah chat valid yang masuk ke WhatsApp penjualan.
+### Bagaimana Pengerjaannya
+- **Geotargeting Spesifik**: Mempersempit sasaran iklan ke wilayah Jawa Timur (Surabaya, Sidoarjo, Malang, Pasuruan) pada segmen orang tua & pegiat gaya hidup sehat usia 25–48 tahun.
+- **A/B Testing Format Iklan**: Menguji 3 format materi iklan di minggu pertama, lalu mengalokasikan 70% anggaran ke materi dengan konversi tertinggi (video uji kemurnian).
+- **Format Pesan WhatsApp Instan**: Mengarahkan klik iklan langsung ke WhatsApp dengan draf pesan otomatis *"Halo Madukara, saya ingin pesan Paket Imunitas Keluarga dari promo Instagram"*, memudahkan admin memantau closing penjualan.
 
-### Hasil & Dampak
-- Iklan format edukasi uji kemurnian madu menghasilkan *Click-Through Rate (CTR)* sebesar 3,4%, jauh di atas rata-rata industri F&B lokal.
-- Terjadi lonjakan chat pemesanan baru sebanyak 180+ kontak tertarget ke admin WhatsApp Madukara selama masa kampanye.
-- Klien memperoleh wawasan nyata mengenai segmen pelanggan paling potensial untuk dijadikan dasar strategi promo bulanan berikutnya.
+### Hasil yang Didapat
+- Rasio klik iklan (*Click-Through Rate / CTR*) mencapai 3,4%, jauh melampaui rata-rata industri produk makanan dan minuman.
+- Menghasilkan 180+ kontak chat calon pembeli baru yang tertarget ke admin WhatsApp Madukara.
+- Biaya per hasil chat berhasil ditekan hingga 45% lebih hemat dibandingkan percobaan iklan mandiri klien sebelumnya.

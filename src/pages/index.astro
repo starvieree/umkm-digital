@@ -11,35 +11,55 @@ import { getCollection } from 'astro:content';
 import { services } from '../data/services';
 import { faqs } from '../data/faqs';
 import { site } from '../data/site';
-import { organizationSchema, websiteSchema } from '../utils/schema';
+import { organizationSchema, websiteSchema, localBusinessSchema, faqSchema } from '../utils/schema';
 const projects = (await getCollection('portfolio', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
 const posts = (await getCollection('blog', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
 const problems = [
-  ['Konten promosi', 'Sulit menemukan ide dan waktu membuat konten.', 'jasa-video-pendek'],
-  ['Media sosial', 'Akun belum dikelola secara konsisten.', 'pengelolaan-media-sosial'],
-  ['Marketplace', 'Produk belum tertata dan jelas bagi pembeli.', 'manajemen-marketplace'],
-  ['Iklan digital', 'Bingung memulai dan memantau iklan.', 'jasa-iklan-digital'],
-  ['Website bisnis', 'Belum punya tempat resmi untuk profil usaha.', 'jasa-pembuatan-website'],
+  ['Produksi Video Pendek', 'Bingung bikin konten TikTok & Reels yang menarik pembeli?', 'jasa-video-pendek'],
+  ['Pengelolaan Media Sosial', 'Akun sepi dan tidak sempat mengunggah konten secara rutin?', 'pengelolaan-media-sosial'],
+  ['Toko Marketplace', 'Etalase belum rapi dan produk kalah saing di pencarian?', 'manajemen-marketplace'],
+  ['Iklan Berbayar', 'Ragu mulai beriklan di Meta Ads atau TikTok karena takut boncos?', 'jasa-iklan-digital'],
+  ['Website Bisnis', 'Perlu katalog resmi yang terpercaya dan terhubung ke WhatsApp?', 'jasa-pembuatan-website'],
 ];
-const steps = [['Hubungi lewat WhatsApp', 'Sampaikan usaha dan kebutuhan Anda.'], ['Diskusi kebutuhan', 'Kami bahas tujuan dan kondisi bisnis.'], ['Sepakati ruang lingkup', 'Pekerjaan dan penawaran dijelaskan lebih dulu.'], ['Pengerjaan', 'Dikerjakan sesuai kesepakatan.'], ['Serah terima', 'Hasil diserahkan atau dievaluasi.']];
-const why = [['Disesuaikan kebutuhan', 'Layanan dipilih dan disusun sesuai kondisi usaha.'], ['Ruang lingkup jelas', 'Apa yang termasuk dan tidak dijelaskan sejak awal.'], ['Komunikasi terbuka', 'Konsultasi langsung lewat WhatsApp.'], ['Evaluasi disepakati', 'Ukuran keberhasilan dibahas bersama, tanpa janji hasil pasti.']];
+const steps = [
+  ['Konsultasi via WhatsApp', 'Ceritakan produk, target pasar, dan kendala yang dihadapi saat ini.'],
+  ['Analisis Kebutuhan', 'Kami pelajari kondisi usaha Anda dan beri rekomendasi solusi yang paling efisien.'],
+  ['Sepakati Ruang Lingkup', 'Rincian tugas, batas revisi, dan biaya disepakati tertulis sejak awal tanpa biaya siluman.'],
+  ['Eksekusi Pengerjaan', 'Tim kami langsung mengeksekusi pekerjaan sesuai jadwal dan standar mutu yang disepakati.'],
+  ['Evaluasi & Serah Terima', 'Hasil kerja diserahkan lengkap dengan laporan perkembangan dan panduan penggunaan praktis.']
+];
+const why = [
+  ['Sesuai Kebutuhan Nyata', 'Rekomendasi layanan disesuaikan dengan kondisi riil bisnis, bukan sekadar menjual paket mahal.'],
+  ['Ruang Lingkup Transparan', 'Rincian pekerjaan dan biaya disepakati tertulis di awal tanpa ada biaya tersembunyi.'],
+  ['Komunikasi Cepat', 'Konsultasi dan koordinasi langsung via WhatsApp tanpa birokrasi rumit.'],
+  ['Fokus Hasil Nyata', 'Evaluasi berbasis data konkret (chat masuk, jangkauan, transaksi), bukan janji manis viralitas.']
+];
 ---
-<MarketingLayout title={site.name} description={site.description} schema={[organizationSchema(), websiteSchema()]}>
+<MarketingLayout
+  title="Solusi Pemasaran Digital Praktis UMKM Jawa Timur"
+  description={site.description}
+  schema={[
+    organizationSchema(),
+    localBusinessSchema(),
+    websiteSchema(),
+    faqSchema(faqs.slice(0, 5))
+  ]}
+>
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>Bantu bisnis UMKM Jawa Timur berkembang lewat solusi digital</h1>
-        <p class="lead">Video pendek, marketplace, media sosial, iklan, hingga website. Dipilih sesuai kebutuhan dan ruang lingkup usaha Anda.</p>
+        <h1>Solusi Pemasaran Praktis UMKM Digital</h1>
+        <p class="lead">Tingkatkan penjualan dan jangkauan pelanggan lewat video pendek, optimasi marketplace, media sosial, iklan berbayar, hingga website profil. Sesuai kebutuhan usaha, transparan, dan tanpa biaya siluman.</p>
         <div class="row">
           <WhatsAppCTA />
           <Button href="/layanan/" variant="secondary">Lihat layanan</Button>
         </div>
-        <p class="hero-note">Konsultasi awal untuk memilih layanan yang sesuai.</p>
+        <p class="hero-note">Konsultasi santai via WhatsApp untuk menemukan solusi yang paling pas dengan budget Anda.</p>
       </div>
       <div class="frame" aria-label="Ringkasan layanan">
         <p class="eyebrow">Layanan tersedia</p>
         <p class="big">06</p>
-        <p class="muted" style="font-size:var(--dp-typography-supporting)">kategori layanan digital untuk UMKM</p>
+        <p class="muted" style="font-size:var(--dp-typography-supporting)">kategori layanan digital terpadu untuk UMKM</p>
         <ul>{services.map((s) => (<li><span>{s.name}</span></li>))}</ul>
       </div>
     </div>
@@ -47,15 +67,15 @@ const why = [['Disesuaikan kebutuhan', 'Layanan dipilih dan disusun sesuai kondi
 
   <div class="container">
     <div class="facts">
-      <div><p class="eyebrow">Layanan</p><p class="num">06</p><p>Kategori layanan, masing-masing dengan halaman sendiri.</p></div>
-      <div><p class="eyebrow">Wilayah</p><p class="num">Jawa Timur</p><p>Cakupan layanan; ketersediaan per wilayah dikonfirmasi.</p></div>
-      <div><p class="eyebrow">Konsultasi</p><p class="num">WhatsApp</p><p>Kanal utama untuk bertanya dan meminta penawaran.</p></div>
+      <div><p class="eyebrow">Layanan</p><p class="num">06</p><p>Kategori layanan terarah sesuai kebutuhan usaha.</p></div>
+      <div><p class="eyebrow">Wilayah</p><p class="num">Jawa Timur</p><p>Cakupan layanan di 38 kabupaten dan kota.</p></div>
+      <div><p class="eyebrow">Konsultasi</p><p class="num">WhatsApp</p><p>Kanal cepat untuk bertanya dan diskusi langsung.</p></div>
     </div>
   </div>
 
   <section class="section">
     <div class="container split">
-      <h2>Kebutuhan digital UMKM yang kami bantu</h2>
+      <h2>Kendala Pemasaran yang Siap Kami Bantu Selesaikan</h2>
       <div class="matrix matrix--2">
         {problems.map(([t, d, slug]) => (
           <article class="cell"><h3>{t}</h3><p>{d}</p><a class="more" href={`/layanan/${slug}/`}>Lihat solusinya<span class="sr-only"> untuk {t}</span></a></article>
@@ -66,28 +86,28 @@ const why = [['Disesuaikan kebutuhan', 'Layanan dipilih dan disusun sesuai kondi
 
   <section class="section section--tint">
     <div class="container">
-      <div class="section-head"><h2>Enam layanan untuk bisnis Anda</h2><p class="muted">Pilih layanan yang sesuai, atau gabungkan beberapa sesuai kebutuhan.</p></div>
-      <div class="matrix">{services.map((s, i) => <ServiceCard service={s} index={i} />)}</div>
+      <div class="section-head"><h2>Pilihan Layanan Digital untuk Usaha Anda</h2><p class="muted">Pilih layanan yang paling dibutuhkan saat ini, atau kombinasikan beberapa layanan sekaligus.</p></div>
+      <div class="matrix">{services.map((s, i) => <ServiceCard service={s} index={i} withImage />)}</div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-head"><h2>Cara kerja</h2><p class="muted">Proses umum. Detailnya menyesuaikan layanan yang dipilih.</p></div>
+      <div class="section-head"><h2>Alur Kerja Praktis & Transparan</h2><p class="muted">Langkah terarah dari awal konsultasi hingga serah terima hasil pekerjaan.</p></div>
       <ol class="steps">{steps.map(([t, d]) => (<li><h3>{t}</h3><p>{d}</p></li>))}</ol>
     </div>
   </section>
 
   <section class="section section--tint">
     <div class="container">
-      <div class="section-head"><h2>Portofolio pilihan</h2><Button href="/portofolio/" variant="text">Semua portofolio</Button></div>
+      <div class="section-head"><h2>Hasil Pekerjaan Nyata</h2><Button href="/portofolio/" variant="text" arrow>Lihat semua portofolio</Button></div>
       {projects.length ? (<div class="matrix">{projects.map((e) => <PortfolioCard entry={e} />)}</div>) : (<p class="empty">Portofolio sedang disiapkan. Kami hanya menampilkan pekerjaan nyata yang sudah mendapat izin publikasi.</p>)}
     </div>
   </section>
 
   <section class="section">
     <div class="container split">
-      <h2>Pendekatan kerja kami</h2>
+      <h2>Kenapa Memilih Bermitra dengan Kami?</h2>
       <ul class="checklist">{why.map(([t, d]) => (<li><strong style="color:var(--dp-color-ink);font-weight:500">{t}.</strong> {d}</li>))}</ul>
     </div>
   </section>
@@ -109,7 +129,7 @@ const why = [['Disesuaikan kebutuhan', 'Layanan dipilih dan disusun sesuai kondi
 
   <section class="section">
     <div class="container split">
-      <div><h2>Pertanyaan yang sering diajukan</h2><div style="margin-top:1.5rem"><Button href="/faq/" variant="secondary">Lihat semua FAQ</Button></div></div>
+      <div><h2>Pertanyaan Seputar Layanan Kami</h2><div style="margin-top:1.5rem"><Button href="/faq/" variant="secondary">Lihat semua FAQ</Button></div></div>
       <FAQList items={faqs.slice(0, 5)} />
     </div>
   </section>

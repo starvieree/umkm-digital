@@ -4,14 +4,26 @@ import PageHero from '../components/PageHero.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { getCollection } from 'astro:content';
+import { articleSchema } from '../utils/schema';
 const posts = (await getCollection('blog', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-<MarketingLayout title="Blog" description="Panduan pemasaran digital untuk UMKM: media sosial, marketplace, konten video, dan website."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Blog' }]}>
-  <PageHero title="Blog" lead="Panduan praktis seputar pemasaran digital dan pengembangan UMKM." />
+<MarketingLayout
+  title="Blog & Panduan Pemasaran Digital UMKM Jawa Timur"
+  description="Panduan praktis pemasaran digital untuk UMKM: strategi media sosial, optimasi marketplace Shopee & Tokopedia, produksi video pendek, dan website bisnis."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Blog' }]}
+  schema={posts.map((p) => articleSchema({
+    title: p.data.title,
+    description: p.data.description,
+    path: `/blog/${p.slug}/`,
+    pubDate: p.data.pubDate,
+    author: p.data.author,
+    image: p.data.coverImage
+  }))}
+>
+  <PageHero title="Wawasan & Panduan Pemasaran UMKM" lead="Kumpulan panduan praktis, tips penjualan, dan strategi pemasaran digital yang mudah dipahami dan diterapkan langsung untuk bisnis Anda." />
   <section class="section"><div class="container">
     {posts.length ? <div class="blog-grid">{posts.map((e) => <ArticleCard entry={e} />)}</div>
-      : <p class="empty">Artikel pertama sedang disiapkan. Sementara itu, lihat <a href="/layanan/" style="color:var(--dp-color-accent)">layanan kami</a> atau tanyakan langsung via WhatsApp.</p>}
+      : <p class="empty">Artikel baru sedang disusun. Sementara itu, silakan lihat <a href="/layanan/" style="color:var(--dp-color-accent)">layanan kami</a> atau diskusikan kebutuhan usaha Anda via WhatsApp.</p>}
   </div></section>
-  <ClosingCTA title="Punya pertanyaan seputar bisnis digital?" secondaryLabel="Lihat layanan" />
+  <ClosingCTA title="Ingin Menerapkan Strategi Ini di Bisnis Anda?" text="Konsultasikan kendala pemasaran Anda langsung dengan tim kami via WhatsApp. Kami siap membantu." secondaryLabel="Lihat layanan" />
 </MarketingLayout>

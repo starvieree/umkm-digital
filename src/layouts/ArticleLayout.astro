@@ -3,8 +3,9 @@ import MarketingLayout from './MarketingLayout.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { formatDate } from '../utils/seo';
-import { articleSchema } from '../utils/schema';
+import { articleSchema, portfolioSchema } from '../utils/schema';
 import { services } from '../data/services';
+import { site } from '../data/site';
 
 const {
   title,
@@ -30,28 +31,43 @@ const authorName = isBlog ? 'Ainur Reza' : (author || 'Ainur Reza');
 
 // Filter headings for Table of Contents (H2 and H3)
 const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth === 3);
+
+const activeSchema = isBlog
+  ? articleSchema({
+      title,
+      description,
+      path,
+      pubDate: pubDate || new Date(),
+      updatedDate,
+      author: authorName,
+      image: coverImage
+    })
+  : portfolioSchema({
+      title,
+      description: description || title,
+      path,
+      category: category || 'Digital Marketing',
+      pubDate,
+      image: coverImage
+    });
 ---
 
 <MarketingLayout
   title={title}
   description={description}
-  ogType="article"
+  ogType={isBlog ? 'article' : 'website'}
   image={coverImage}
+  imageAlt={coverAlt ?? title}
+  publishedTime={pubDate ? pubDate.toISOString() : undefined}
+  modifiedTime={updatedDate ? updatedDate.toISOString() : (pubDate ? pubDate.toISOString() : undefined)}
+  author={authorName}
+  section={category || section}
   breadcrumbs={[
     { label: 'Beranda', href: '/' },
     { label: section, href: sectionHref },
     { label: title }
   ]}
-  schema={[
-    articleSchema({
-      title,
-      description,
-      path,
-      pubDate,
-      updatedDate,
-      author: authorName
-    })
-  ]}
+  schema={[activeSchema]}
 >
   <article class="section article-page-section">
     <div class="container article-container">
@@ -227,7 +243,14 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
               <div class="author-bio-card">
                 <div class="author-card-header">
                   <div class="author-avatar-col">
-                    <div class="author-avatar-img">AR</div>
+                    <img
+                      src="/images/team/ainur-reza.webp"
+                      alt="Ainur Reza"
+                      width="60"
+                      height="60"
+                      loading="lazy"
+                      class="author-avatar-img"
+                    />
                   </div>
                   <div class="author-meta-col">
                     <h3 class="author-name">Ainur Reza</h3>
@@ -300,7 +323,7 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20UMKM%20Digital%2C%20saya%20ingin%20konsultasi%20paket%20layanan"
+                  href={`https://api.whatsapp.com/send?phone=${site.whatsapp}&text=Halo%20UMKM%20Digital%2C%20saya%20ingin%20konsultasi%20paket%20layanan`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn--secondary pkg-btn-wa"

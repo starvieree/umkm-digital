@@ -9,24 +9,21 @@ author: "Tim UMKM Digital"
 draft: false
 ---
 
-### Profil Klien
-**Sambal Bu Ninik** adalah produsen aneka sambal kemasan botol kaca khas Surabaya (Sambal Bawang, Sambal Cumi Asin, dan Sambal Klotok). Berdiri sejak 2018 di Rungkut, Surabaya, produk sambal Bu Ninik sudah memiliki izin edar P-IRT dan sertifikasi Halal, namun penjualan online masih belum terkelola optimal.
+### Profil Klien & Masalah
+**Sambal Bu Ninik** (Surabaya) memproduksi sambal botol kaca khas Jawa Timur (Sambal Bawang, Cumi Asin, Klotok) berizin P-IRT dan Halal. Toko di Shopee & Tokopedia sudah aktif 2 tahun namun penjualan macet: foto produk gelap diambil seadanya, judul produk pendek tanpa kata kunci pencarian, dan pembeli luar kota enggan order karena berat di ongkir tanpa adanya paket bundling.
 
-### Masalah yang Dihadapi
-Toko Sambal Bu Ninik di Shopee dan Tokopedia sudah ada selama 2 tahun, namun performanya stagnan:
-1. **Listing Produk Berantakan**: Nama produk pendek dan tidak mengandung kata kunci pencarian umum, sehingga tenggelam di hasil pencarian marketplace.
-2. **Foto Produk Kurang Menggugah Selera**: Foto produk diambil seadanya menggunakan kamera ponsel dengan latar belakang rumah yang kurang profesional.
-3. **Deskripsi dan Informasi Kedaluwarsa Minim**: Banyak pembeli ragu memesan karena tidak ada keterangan ketahanan sambal setelah segel dibuka dan petunjuk pengiriman luar kota.
-4. **Tingkat Transaksi Bundling Rendah**: Sebagian besar pembeli hanya membeli 1 botol, sehingga biaya ongkos kirim terasa mahal bagi pembeli luar Jawa Timur.
+### Apa yang Dikerjakan
+- Merombak total dekorasi toko (*store decoration*) Shopee dan Tokopedia resmi Sambal Bu Ninik.
+- Menstandarisasi foto katalog dan membuat infografis visual keunggulan produk (100% cabai segar, tanpa pengawet, ketahanan 3 bulan).
+- Menulis ulang judul dan deskripsi produk berbasis kata kunci pencarian populer (*SEO Marketplace*).
+- Membuat paket hemat bundling 3 botol dengan kardus oleh-oleh khusus dan memasang voucher diskon toko.
 
-### Solusi & Ruang Lingkup Pekerjaan
-UMKM Digital melakukan penataan ulang menyeluruh (*store revamping*) untuk akun Shopee dan Tokopedia resmi Sambal Bu Ninik:
-- **Dekorasi Toko Resmi (*Store Decoration*)**: Mendesain banner promosi toko, kategori etalase rapi (Varian Pedas Ekstrem, Varian Gurih, dan Paket Hemat Bundling).
-- **Standarisasi Visual & Infografis Produk**: Menyiapkan template foto produk profesional dengan highlight keunggulan: *100% Cabai Segar, Tanpa Pengawet Buatan, dan Tahan 3 Bulan*.
-- **Optimasi Judul & SEO Marketplace**: Mengubah judul produk mengikuti formula standar pencarian populer, contoh: *"Sambal Cumi Asin Pedas Gurih Bu Ninik Surabaya 200gr - Oleh-Oleh Khas Surabaya Halal"*.
-- **Pembuatan Paket Bundling & Pengaturan Voucher Toko**: Menyusun paket bundling hemat isi 3 botol dengan kemasan kardus eksklusif yang cocok dijadikan oleh-oleh, serta memasang voucher diskon toko untuk menarik pengikut baru.
+### Bagaimana Pengerjaannya
+- **Penerapan Rumus Judul SEO**: Mengubah seluruh judul produk dengan struktur teruji: *[Jenis Sambal] + [Rasa/Tekstur] + [Merek] + [Berat Gram] + [Kata Kunci Oleh-Oleh Surabaya]*.
+- **Penyusunan Etalase Tematik**: Membagi kategori toko menjadi: Varian Pedas Gurih, Varian Sambal Lauk Ikan/Cumi, dan Paket Bundling Hemat Oleh-Oleh.
+- **Strategi Bundling & Garansi Pengiriman**: Menambahkan opsi paket 3 varian hemat ongkir, melengkapi informasi garansi ganti botol baru jika pecah dalam perjalanan, dan panduan penyimpanan setelah segel dibuka.
 
-### Hasil & Dampak
-- Skor kesehatan toko (*Shop Health*) meningkat ke level optimal berkat katalog yang lengkap dan jelas.
-- Nilai rata-rata pesanan (*Average Order Value*) naik 35% karena lebih dari separuh pembeli kini memilih paket bundling 3 toples.
-- Pembeli merasa aman bertransaksi berkat informasi garansi penggantian jika botol rusak selama pengiriman.
+### Hasil yang Didapat
+- Nilai belanja rata-rata per transaksi (*Average Order Value*) naik 35% karena lebih dari 60% pembeli beralih ke paket bundling 3 toples.
+- Penjualan bulanan di toko online meningkat stabil hingga 3 kali lipat dalam 60 hari pertama setelah toko dirapikan.
+- Pertanyaan calon pembeli seputar masa kedaluwarsa dan keamanan pengiriman luar pulau berkurang drastis berkat deskripsi yang jelas.

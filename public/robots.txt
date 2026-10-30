@@ -1,5 +1,23 @@
 User-agent: *
 Allow: /
 
-# GANTI dengan domain produksi final
-Sitemap: https://example.com/sitemap-index.xml
+# Search Engine & AI Answer Engine Crawlers (SEO / AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://umkmdigital.id/sitemap-index.xml

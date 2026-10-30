@@ -2,29 +2,277 @@
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
-const values = [['Komunikasi jelas', 'Kami menjelaskan proses dan perkembangan pekerjaan.'], ['Ruang lingkup transparan', 'Yang termasuk dan tidak termasuk dibahas sejak awal.'], ['Solusi sesuai kebutuhan', 'Layanan disesuaikan dengan kondisi usaha Anda.'], ['Evaluasi sesuai kesepakatan', 'Ukuran keberhasilan ditentukan bersama.']];
+import Button from '../components/Button.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+
+const values = [
+  {
+    title: 'Komunikasi Jelas',
+    desc: 'Kami menjelaskan setiap tahapan dan perkembangan pekerjaan secara rutin tanpa istilah teknis yang rumit.',
+    num: '01'
+  },
+  {
+    title: 'Ruang Lingkup Transparan',
+    desc: 'Rincian apa yang dikerjakan, batas revisi, dan materi yang disiapkan dibahas dan disepakati tertulis sejak awal.',
+    num: '02'
+  },
+  {
+    title: 'Solusi Sesuai Kebutuhan',
+    desc: 'Setiap rekomendasi layanan disesuaikan dengan kondisi riil usaha, anggaran, dan kesiapan operasional Anda.',
+    num: '03'
+  },
+  {
+    title: 'Evaluasi Sesuai Kesepakatan',
+    desc: 'Indikator keberhasilan ditentukan bersama berdasarkan data nyata, bukan klaim viralitas atau janji instan.',
+    num: '04'
+  }
+];
+
+const team = [
+  {
+    name: 'Ainur Reza',
+    role: 'Lead Digital Marketing Consultant',
+    image: '/images/team/ainur-reza.webp',
+    badge: 'Strategi & Pertumbuhan',
+    bio: 'Praktisi pemasaran digital dengan pengalaman mendampingi ratusan UMKM lokal. Berfokus pada periklanan Meta & TikTok Ads, arsitektur penawaran, serta optimasi corong konversi.'
+  },
+  {
+    name: 'Dian Safitri',
+    role: 'Creative & Content Specialist',
+    image: '/images/team/dian-safitri.webp',
+    badge: 'Produksi & Kreatif',
+    bio: 'Kreator visual dan spesialis produksi video pendek (TikTok & Reels). Berpengalaman mengangkat cerita otentik produk lokal agar menarik generasi muda dan mendorong interaksi.'
+  },
+  {
+    name: 'Dimas Prasetyo',
+    role: 'Web & Marketplace Specialist',
+    image: '/images/team/dimas-prasetyo.webp',
+    badge: 'Web & E-Commerce',
+    bio: 'Spesialis perancangan website profil bisnis cepat saji, optimasi SEO organik lokal, dan penataan etalase toko di lokapasar terkemuka.'
+  }
+];
+
+import { organizationSchema, localBusinessSchema, personSchema } from '../utils/schema';
+
+const stats = [
+  { num: '06', label: 'Layanan Terpadu', desc: 'Solusi lengkap hulu ke hilir' },
+  { num: '38', label: 'Kab / Kota', desc: 'Jangkauan di Jawa Timur' },
+  { num: '100%', label: 'Transparan', desc: 'Ruang lingkup disepakati awal' }
+];
 ---
-<MarketingLayout title="Tentang Kami" description="Kenali layanan digital untuk UMKM Jawa Timur: latar belakang, prinsip kerja, dan cara kami bekerja bersama klien."
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Tentang Kami' }]}>
-  <PageHero title="Tentang kami" lead="Kami membantu UMKM di Jawa Timur memanfaatkan kanal digital dengan cara yang jelas dan terukur." />
-  <section class="section"><div class="container split">
-    <h2>Latar belakang</h2>
-    <div class="prose">
-      <p>Banyak pelaku UMKM butuh dukungan digital, tetapi belum tahu layanan mana yang sesuai, apa yang termasuk di dalamnya, dan bagaimana memulainya.</p>
-      <p>Website ini dibuat agar Anda bisa memahami layanan, proses kerja, dan langkah konsultasi sebelum menghubungi kami.</p>
-      <!-- GANTI: tambahkan cerita bisnis faktual, visi/misi, dan profil tim hanya jika sudah dikonfirmasi pemilik usaha. -->
+
+<MarketingLayout
+  title="Tentang Kami - Tim Konsultan UMKM Digital Jawa Timur"
+  description="Kenali layanan digital untuk UMKM Jawa Timur: latar belakang, prinsip kerja, tim konsultan, dan cara kami mendampingi usaha Anda."
+  image="/images/about/konsultasi-strategi-umkm.webp"
+  imageAlt="Sesi konsultasi strategi pemasaran digital bersama pelaku UMKM di Jawa Timur"
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Tentang Kami' }]}
+  schema={[
+    organizationSchema(),
+    localBusinessSchema(),
+    ...team.map(personSchema)
+  ]}
+>
+  <PageHero
+    title="Tentang UMKM Digital Jawa Timur"
+    lead="Mitra terpercaya bagi pelaku UMKM di Jawa Timur untuk memaksimalkan pemasaran digital secara terarah, terukur, dan bebas ribet."
+  />
+
+  {/* Section 1: Latar Belakang & Komitmen */}
+  <section class="section">
+    <div class="container about-story-grid">
+      <div>
+        <p class="eyebrow">Dedikasi Usaha Lokal</p>
+        <h2 style="margin-top:.4rem;margin-bottom:1.25rem">Dukungan Digital Praktis dan Terarah untuk UMKM</h2>
+        <div class="prose">
+          <p>
+            Banyak pelaku UMKM di Jawa Timur memiliki produk unggulan bernilai tinggi—mulai dari kuliner khas, kriya tangan, fesyen batik pesisiran, hingga olahan pangan lokal. Namun, ketika ingin merambah dunia digital, banyak yang merasa bingung menentukan langkah awal, khawatir biaya membengkak tanpa hasil jelas, atau kesulitan membuat materi promosi yang menarik pembeli.
+          </p>
+          <p>
+            UMKM Digital hadir sebagai mitra pendamping langsung. Kami membantu Anda merapikan etalase digital, mengoptimalkan listing marketplace, menyusun kampanye iklan berbayar, dan memproduksi video pendek yang relevan dengan calon pelanggan Anda.
+          </p>
+          <p>
+            Kami percaya bahwa digitalisasi usaha tidak harus rumit atau mahal. Yang terpenting adalah memilih solusi yang tepat sesuai kapasitas dan kebutuhan riil bisnis Anda saat ini.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          {stats.map((s) => (
+            <div class="about-stat-item">
+              <span class="about-stat-num">{s.num}</span>
+              <span class="about-stat-label">{s.label}</span>
+              <span class="about-stat-desc">{s.desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <figure class="about-figure">
+        <div class="about-img-wrap">
+          <img
+            src="/images/about/konsultasi-strategi-umkm.webp"
+            alt="Sesi diskusi dan konsultasi strategi pemasaran digital bersama pelaku UMKM di Jawa Timur"
+            width="1200"
+            height="670"
+            loading="lazy"
+            class="about-img"
+          />
+          <span class="about-badge">Konsultasi Nyata</span>
+        </div>
+        <figcaption class="about-caption">
+          <strong>Pendampingan Berkelanjutan:</strong> Mendiskusikan strategi digital secara langsung sesuai karakteristik produk dan target pasar lokal.
+        </figcaption>
+      </figure>
     </div>
-  </div></section>
-  <section class="section section--tint"><div class="container">
-    <h2 style="margin-bottom:2rem">Prinsip kerja</h2>
-    <div class="matrix matrix--2">{values.map(([t, d]) => (<article class="cell"><h3>{t}</h3><p>{d}</p></article>))}</div>
-  </div></section>
-  <section class="section"><div class="container split">
-    <h2>Wilayah dan metode layanan</h2>
-    <div class="prose">
-      <p>Layanan jarak jauh dapat dibahas untuk UMKM di seluruh Jawa Timur. Layanan tatap muka tergantung ketersediaan dan perlu dikonfirmasi per wilayah.</p>
-      <p>Kami tidak memiliki kantor di setiap kota. Lihat <a href="/area-layanan/">area layanan</a> untuk detailnya.</p>
+  </section>
+
+  {/* Section 2: Prinsip Kerja & Aktivitas Produksi */}
+  <section class="section section--tint">
+    <div class="container split">
+      {/* Kolom Kiri: Foto & Dokumentasi Aktivitas */}
+      <div>
+        <figure class="about-figure">
+          <div class="about-img-wrap">
+            <img
+              src="/images/about/produksi-konten-kreatif.webp"
+              alt="Aktivitas produksi konten kreatif dan video produk UMKM di studio"
+              width="1200"
+              height="670"
+              loading="lazy"
+              class="about-img"
+            />
+            <span class="about-badge">Produksi Kreatif</span>
+          </div>
+          <figcaption class="about-caption">
+            <strong>Eksekusi Profesional:</strong> Pengambilan footage produk, penataan pencahayaan, dan editing video pendek vertikal untuk kanal TikTok dan Reels.
+          </figcaption>
+        </figure>
+
+        <div class="about-feature-box">
+          <p>
+            <strong style="color:var(--dp-color-ink)">Dukungan Alat & Materi Lengkap:</strong> Dari riset konsep konten, penulisan naskah (scriptwriting), pengambilan video produk, hingga penjadwalan unggahan teratur di media sosial bisnis Anda.
+          </p>
+        </div>
+      </div>
+
+      {/* Kolom Kanan: Penjelasan & Nilai Prinsip Kerja */}
+      <div>
+        <p class="eyebrow">Standar & Nilai Kerja</p>
+        <h2 style="margin-top:.4rem;margin-bottom:1.5rem">Prinsip Kerja Kami</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));gap:1.15rem">
+          {values.map((v) => (
+            <article class="cell" style="padding:1.35rem">
+              <span class="idx mono">{v.num}</span>
+              <h3 style="margin-top:.35rem">{v.title}</h3>
+              <p>{v.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
     </div>
-  </div></section>
-  <ClosingCTA title="Kenali layanan kami lebih lanjut" />
+  </section>
+
+  {/* Section 3: Konsultan & Tim Pendamping */}
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Orang di Balik Layar</p>
+          <h2 style="margin-top:.4rem">Konsultan & Tim Pendamping</h2>
+        </div>
+        <p class="muted">Praktisi berpengalaman yang berdedikasi mendampingi transformasi digital para pelaku UMKM Jawa Timur.</p>
+      </div>
+
+      <div class="team-grid">
+        {team.map((member) => (
+          <article class="team-card">
+            <div class="team-card-top">
+              <div class="team-avatar-wrap">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  class="team-avatar-img"
+                />
+              </div>
+              <div class="team-meta">
+                <h3 class="team-name">{member.name}</h3>
+                <span class="team-role">{member.role}</span>
+              </div>
+            </div>
+            <span class="team-badge">{member.badge}</span>
+            <p class="team-bio">{member.bio}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Section 4: Wilayah & Metode Layanan */}
+  <section class="section section--tint">
+    <div class="container split">
+      {/* Kolom Kiri: Foto & Dokumentasi */}
+      <figure class="about-figure">
+        <div class="about-img-wrap">
+          <img
+            src="/images/about/pendampingan-umkm-jawa-timur.webp"
+            alt="Sesi pelatihan dan kolaborasi bersama komunitas UMKM di Jawa Timur"
+            width="1200"
+            height="670"
+            loading="lazy"
+            class="about-img"
+          />
+          <span class="about-badge">Kolaborasi Jawa Timur</span>
+        </div>
+        <figcaption class="about-caption">
+          <strong>Pemberdayaan Daerah:</strong> Workshop dan kolaborasi berkala bersama komunitas pengusaha UMKM di berbagai kota Jawa Timur.
+        </figcaption>
+      </figure>
+
+      {/* Kolom Kanan: Penjelasan Wilayah & Metode */}
+      <div>
+        <p class="eyebrow">Jangkauan Wilayah</p>
+        <h2 style="margin-top:.4rem;margin-bottom:1.25rem">Wilayah & Metode Layanan</h2>
+        <div class="prose">
+          <p>
+            Kami melayani pelaku UMKM di seluruh wilayah Jawa Timur dengan fleksibilitas metode yang dapat disesuaikan:
+          </p>
+        </div>
+
+        <div class="about-method-card">
+          <div class="about-method-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Layanan Jarak Jauh (Online / Remote)</span>
+          </div>
+          <p class="about-method-text">
+            Dapat dilakukan untuk UMKM di 38 kabupaten/kota melalui komunikasi intensif via WhatsApp, Google Meet, dan pelaporan berkala.
+          </p>
+        </div>
+
+        <div class="about-method-card">
+          <div class="about-method-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Layanan Tatap Muka (Onsite)</span>
+          </div>
+          <p class="about-method-text">
+            Tersedia untuk sesi pengambilan foto/video produk, setup live streaming studio, atau pendampingan langsung berdasarkan jadwal dan konfirmasi wilayah.
+          </p>
+        </div>
+
+        <div class="row" style="margin-top:1.5rem">
+          <Button href="/area-layanan/" variant="primary">Lihat Area Layanan</Button>
+          <WhatsAppCTA label="Konsultasi Wilayah" message="Halo, saya ingin menanyakan ketersediaan layanan UMKM Digital untuk wilayah saya." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ClosingCTA
+    title="Siap Mengembangkan Usaha Anda Lewat Solusi Digital?"
+    lead="Ceritakan produk dan kendala usaha Anda kepada tim kami. Kami siap membantu menentukan paket dan ruang lingkup yang tepat."
+    secondaryHref="/layanan/"
+    secondaryLabel="Lihat Semua Layanan"
+  />
 </MarketingLayout>
