@@ -8,3 +8,4 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [sitemap()],
 });
+// Astro config reloaded

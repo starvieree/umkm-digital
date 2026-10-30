@@ -57,7 +57,7 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
     <div class="container article-container">
       {isBlog ? (
         <div class="article-layout-grid">
-          {/* Main Column: Judul, Meta, Cover, Ringkasan, TOC, Isi, Share, Identitas Penulis */}
+          {/* Main Column: Judul, Meta, Ringkasan, TOC, Cover (dibuat ke bawah), Isi, Share, Identitas Penulis */}
           <div class="article-main-column">
             {category && <p class="eyebrow">{category}</p>}
             <h1 class="article-main-title">{title}</h1>
@@ -95,7 +95,7 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
               )}
             </div>
 
-            {/* Featured Cover Image with Alt and Caption */}
+            {/* Featured Cover Image with Alt and Caption - Di atas ringkasan dan daftar isi */}
             {coverImage && (
               <figure class="article-cover-figure">
                 <img
@@ -109,7 +109,7 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
               </figure>
             )}
 
-            {/* Ringkasan Artikel (Summary Box) */}
+            {/* Ringkasan Artikel (Summary Box) - Di bawah gambar */}
             {summary && summary.length > 0 && (
               <aside class="article-summary-card" aria-label="Ringkasan Artikel">
                 <div class="summary-header">
@@ -126,7 +126,7 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
               </aside>
             )}
 
-            {/* Daftar Isi (Collapsible Table of Contents) */}
+            {/* Daftar Isi (Collapsible Table of Contents) - Di bawah gambar & ringkasan */}
             {tocHeadings.length > 0 && (
               <details class="article-toc" open>
                 <summary class="toc-summary">
@@ -142,7 +142,6 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
                     <span class="toc-title">Daftar Isi</span>
                   </span>
                   <span class="toc-summary-right">
-                    <span class="toc-toggle-hint">Buka / Tutup</span>
                     <svg class="toc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <polyline points="6 9 12 15 18 9"/>
                     </svg>
@@ -226,18 +225,18 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
 
               {/* Author Card: Ainur Reza */}
               <div class="author-bio-card">
-                <div class="author-avatar-col">
-                  <div class="author-avatar-img">AR</div>
-                </div>
-                <div class="author-content-col">
-                  <div class="author-title-row">
-                    <h3 class="author-name">Ainur Reza</h3>
-                    <span class="author-role-badge">Digital Marketing Specialist</span>
+                <div class="author-card-header">
+                  <div class="author-avatar-col">
+                    <div class="author-avatar-img">AR</div>
                   </div>
-                  <p class="author-desc">
-                    Praktisi pemasaran digital dan konsultan UMKM yang berfokus membantu pelaku usaha lokal bertumbuh lewat strategi konten kreatif, optimasi marketplace, dan kehadiran website bisnis yang berdaya saing.
-                  </p>
+                  <div class="author-meta-col">
+                    <h3 class="author-name">Ainur Reza</h3>
+                    <span class="author-role-badge">Lead Digital Marketing Consultant</span>
+                  </div>
                 </div>
+                <p class="author-desc">
+                  Konsultan pemasaran digital dan praktisi akselerasi bisnis UMKM dengan pengalaman mendampingi ratusan pelaku usaha lokal. Berfokus pada integrasi performa periklanan digital (Meta & TikTok Ads), optimasi katalog lokapasar, serta arsitektur website bisnis berdaya konversi tinggi.
+                </p>
               </div>
             </div>
           </div>
@@ -331,14 +330,15 @@ const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth
     </div>
   </article>
 
-  {/* Artikel Terkait (3 Artikel Sebelum CTA) */}
+  {/* Artikel Terkait (3 Artikel Sebelum CTA) - Header diperbaiki agar tidak sejajar aneh */}
   {isBlog && relatedPosts && relatedPosts.length > 0 && (
     <section class="section article-related-section">
       <div class="container">
-        <div class="section-head" style="margin-bottom:2.25rem">
-          <p class="eyebrow">Rekomendasi</p>
-          <h2 style="font-size:clamp(1.6rem,3.2vw,2.25rem);margin-top:.35rem">Artikel Terkait Lainnya</h2>
-          <p class="lead" style="max-width:36rem;margin-inline:auto">Eksplorasi wawasan dan strategi digital terkini untuk mempercepat pertumbuhan bisnis UMKM Anda.</p>
+        <div class="section-head" style="margin-bottom:2.25rem;align-items:flex-start">
+          <div>
+            <p class="eyebrow">Rekomendasi</p>
+            <h2 style="font-size:clamp(1.6rem,3.2vw,2.25rem);margin-top:.35rem">Artikel Terkait Lainnya</h2>
+          </div>
         </div>
         <div class="blog-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
           {relatedPosts.slice(0, 3).map((post: any) => (
