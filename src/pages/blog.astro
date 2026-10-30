@@ -1,0 +1,17 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<MarketingLayout title="Blog" description="Panduan pemasaran digital untuk UMKM: media sosial, marketplace, konten video, dan website."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Blog' }]}>
+  <PageHero title="Blog" lead="Panduan praktis seputar pemasaran digital dan pengembangan UMKM." />
+  <section class="section"><div class="container">
+    {posts.length ? <div class="blog-grid">{posts.map((e) => <ArticleCard entry={e} />)}</div>
+      : <p class="empty">Artikel pertama sedang disiapkan. Sementara itu, lihat <a href="/layanan/" style="color:var(--dp-color-accent)">layanan kami</a> atau tanyakan langsung via WhatsApp.</p>}
+  </div></section>
+  <ClosingCTA title="Punya pertanyaan seputar bisnis digital?" secondaryLabel="Lihat layanan" />
+</MarketingLayout>

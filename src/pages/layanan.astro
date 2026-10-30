@@ -1,0 +1,33 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQList from '../components/FAQList.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import { services } from '../data/services';
+import { faqs } from '../data/faqs';
+const guide = [['Butuh materi promosi video', 'jasa-video-pendek'], ['Ingin berjualan lewat siaran langsung', 'jasa-live-commerce'], ['Ingin toko online tertata', 'manajemen-marketplace'], ['Butuh konten rutin di media sosial', 'pengelolaan-media-sosial'], ['Ingin menjalankan kampanye berbayar', 'jasa-iklan-digital'], ['Butuh website bisnis', 'jasa-pembuatan-website']];
+const steps = ['Konsultasi', 'Analisis kebutuhan', 'Kesepakatan ruang lingkup dan biaya', 'Pelaksanaan', 'Evaluasi atau serah terima'];
+---
+<MarketingLayout title="Layanan & Harga" description="Enam layanan digital untuk UMKM: video pendek, live commerce, marketplace, media sosial, iklan digital, dan website."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Layanan' }]}>
+  <PageHero title="Layanan digital untuk UMKM" lead="Pilih layanan sesuai masalah yang ingin diselesaikan. Harga menyesuaikan ruang lingkup, jadi mulai dengan konsultasi.">
+    <div style="margin-top:1.5rem"><WhatsAppCTA /></div>
+  </PageHero>
+  <section class="section"><div class="container">
+    <div class="matrix">{services.map((s, i) => <ServiceCard service={s} index={i} withImage />)}</div>
+  </div></section>
+  <section class="section section--tint"><div class="container split">
+    <h2>Bagaimana memilih layanan</h2>
+    <ul class="checklist">{guide.map(([t, slug]) => (<li>{t}: <a href={`/layanan/${slug}/`} style="color:var(--dp-color-accent)">{services.find((s) => s.slug === slug)!.name}</a></li>))}</ul>
+  </div></section>
+  <section class="section"><div class="container">
+    <h2 style="margin-bottom:2rem">Alur kerja</h2>
+    <ol class="steps">{steps.map((t) => (<li><h3>{t}</h3></li>))}</ol>
+  </div></section>
+  <section class="section section--tint"><div class="container split">
+    <h2>FAQ layanan</h2><FAQList items={faqs.filter((f) => ['Layanan', 'Harga'].includes(f.group))} />
+  </div></section>
+  <ClosingCTA secondaryHref="/portofolio/" secondaryLabel="Lihat portofolio" />
+</MarketingLayout>

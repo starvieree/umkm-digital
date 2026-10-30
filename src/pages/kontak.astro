@@ -1,0 +1,21 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { site } from '../data/site';
+const prep = ['Jenis bisnis Anda', 'Kebutuhan atau masalah utama', 'Layanan yang diminati', 'Target waktu pengerjaan', 'Materi pendukung yang sudah ada'];
+---
+<MarketingLayout title="Kontak" description="Hubungi kami lewat WhatsApp untuk konsultasi layanan digital UMKM."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Kontak' }]}>
+  <PageHero title="Hubungi kami" lead="Cara tercepat adalah lewat WhatsApp. Ceritakan kebutuhan Anda dan kami bantu menentukan langkah berikutnya.">
+    <div style="margin-top:1.5rem"><WhatsAppCTA /></div>
+  </PageHero>
+  <section class="section"><div class="container cols-2">
+    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:1rem">Kanal komunikasi</h2>
+      <ul class="checklist"><li>WhatsApp (kanal utama)</li>{site.email && <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>}{site.hours && <li>Jam komunikasi: {site.hours}</li>}{site.address && <li>Alamat: {site.address}</li>}</ul>
+    </div>
+    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:1rem">Siapkan sebelum konsultasi</h2><ul class="checklist">{prep.map((p) => <li>{p}</li>)}</ul></div>
+  </div></section>
+  <ClosingCTA title="Siap berdiskusi?" secondaryLabel="Lihat layanan" />
+</MarketingLayout>

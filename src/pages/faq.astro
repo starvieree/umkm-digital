@@ -1,0 +1,17 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQList from '../components/FAQList.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { faqs } from '../data/faqs';
+const groups = [...new Set(faqs.map((f) => f.group))];
+---
+<MarketingLayout title="FAQ" description="Jawaban atas pertanyaan umum tentang layanan, harga, proses kerja, dan area layanan."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'FAQ' }]}>
+  <PageHero title="Pertanyaan yang sering diajukan" lead="Jawaban singkat sebelum Anda menghubungi kami." />
+  <section class="section"><div class="container" style="max-width:52rem">
+    <nav aria-label="Kategori FAQ" class="tags">{groups.map((g) => <a class="tag" href={`#${g.toLowerCase()}`}>{g}</a>)}</nav>
+    {groups.map((g) => (<div class="faq-group" id={g.toLowerCase()}><h2>{g}</h2><FAQList items={faqs.filter((f) => f.group === g)} /></div>))}
+  </div></section>
+  <ClosingCTA title="Pertanyaan Anda belum terjawab?" secondaryHref="/kontak/" secondaryLabel="Halaman kontak" />
+</MarketingLayout>

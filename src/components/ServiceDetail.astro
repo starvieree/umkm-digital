@@ -1,0 +1,85 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import ClosingCTA from './ClosingCTA.astro';
+import FAQList from './FAQList.astro';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+import Button from './Button.astro';
+import { getService, services } from '../data/services';
+import { serviceSchema } from '../utils/schema';
+const { slug } = Astro.props;
+const s = getService(slug);
+const related = s.related.map(getService);
+const steps = [['Konsultasi', 'Ceritakan usaha, produk, dan tujuan Anda.'], ['Kebutuhan dan materi', 'Kami kumpulkan informasi dan materi yang diperlukan.'], ['Penawaran', 'Ruang lingkup dan biaya disepakati lebih dulu.'], ['Pengerjaan', 'Pekerjaan berjalan sesuai kesepakatan, termasuk review dan revisi.'], ['Penyerahan', 'Hasil diserahkan dan dievaluasi bila termasuk paket.']];
+---
+<MarketingLayout title={s.name} description={s.short} image={`/images/services/${s.slug}.webp`}
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Layanan', href: '/layanan/' }, { label: s.name }]} schema={[serviceSchema(s)]}>
+  <section class="page-hero">
+    <div class="container detail-hero">
+      <div>
+        <p class="eyebrow">{s.name}</p>
+        <h1 style="margin-top:.75rem">{s.headline}</h1>
+        <p class="lead">{s.intro}</p>
+        <div class="row" style="margin-top:1.75rem">
+          <WhatsAppCTA message={s.waMessage} />
+          <Button href="/portofolio/" variant="secondary">Lihat portofolio</Button>
+        </div>
+      </div>
+      <img src={`/images/services/${s.slug}.webp`} alt="" width="1200" height="800" fetchpriority="high" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cols-2">
+      <div class="panel"><h2 style="font-size:1.5rem;margin-bottom:.75rem">Cocok untuk siapa</h2><ul class="checklist">{s.forWho.map((x) => <li>{x}</li>)}</ul></div>
+      <div class="panel"><h2 style="font-size:1.5rem;margin-bottom:.75rem">Masalah yang dibantu</h2><ul class="checklist">{s.problems.map((x) => <li>{x}</li>)}</ul></div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <h2 style="margin-bottom:2rem">Ruang lingkup dan hal yang perlu disiapkan</h2>
+      <div class="cols-2">
+        <div><h3 style="margin-bottom:.5rem">Yang dikerjakan</h3><ul class="checklist">{s.scope.map((x) => <li>{x}</li>)}</ul></div>
+        <div><h3 style="margin-bottom:.5rem">Yang perlu Anda siapkan</h3><ul class="checklist">{s.clientNeeds.map((x) => <li>{x}</li>)}</ul></div>
+      </div>
+      <p class="note" style="margin-top:2rem">{s.note}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="margin-bottom:2rem">Proses pengerjaan</h2>
+      <ol class="steps">{steps.map(([t, d]) => (<li><h3>{t}</h3><p>{d}</p></li>))}</ol>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container split">
+      <div>
+        <h2>Paket dan faktor harga</h2>
+        <p class="lead" style="margin-top:1rem">Harga menyesuaikan ruang lingkup. Hubungi kami untuk mendapatkan penawaran.</p>
+        <div style="margin-top:1.5rem"><WhatsAppCTA message={s.waMessage} label="Minta penawaran" /></div>
+      </div>
+      <div class="panel panel--accent"><h3>Yang memengaruhi biaya</h3><ul class="checklist">{s.priceFactors.map((x) => <li>{x}</li>)}</ul></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <h2>Pertanyaan tentang {s.name}</h2>
+      <FAQList items={s.faqs} />
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <h2 style="margin-bottom:2rem">Layanan terkait</h2>
+      <div class="matrix matrix--2">
+        {related.map((r) => (
+          <article class="cell"><h3><a class="title-link" href={`/layanan/${r.slug}/`}>{r.name}</a></h3><p>{r.short}</p><a class="more" href={`/layanan/${r.slug}/`}>Pelajari layanan<span class="sr-only"> {r.name}</span></a></article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <ClosingCTA message={s.waMessage} secondaryHref="/portofolio/" secondaryLabel="Lihat portofolio" />
+</MarketingLayout>

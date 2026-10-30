@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# GANTI dengan domain produksi final
+Sitemap: https://example.com/sitemap-index.xml

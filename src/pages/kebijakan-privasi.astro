@@ -1,0 +1,21 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+---
+<MarketingLayout title="Kebijakan Privasi" description="Penjelasan singkat tentang penanganan informasi pengunjung website."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Kebijakan Privasi' }]}>
+  <PageHero title="Kebijakan privasi" lead="Terakhir diperbarui: 30 Oktober 2026." />
+  <section class="section"><div class="container"><div class="prose">
+    <h2>Ringkasan</h2>
+    <p>Website ini bersifat statis. Tidak ada formulir, akun pengguna, atau database yang menyimpan data pengunjung.</p>
+    <h2>Informasi yang diproses</h2>
+    <p>Website ini tidak memasang analitik atau cookie pelacak. Jika Anda menekan tombol WhatsApp, Anda diarahkan ke WhatsApp dan informasi yang Anda kirim di sana tunduk pada kebijakan WhatsApp serta kami gunakan untuk menanggapi permintaan Anda.</p>
+    <h2>Tujuan penggunaan</h2>
+    <p>Informasi dari percakapan dipakai untuk menjawab pertanyaan, menyusun penawaran, dan menjalankan layanan yang Anda minta.</p>
+    <h2>Layanan pihak ketiga</h2>
+    <p>Tautan keluar (misalnya WhatsApp) dikelola pihak ketiga. Kebijakan ini perlu diperbarui jika analitik atau formulir ditambahkan.</p>
+    <h2>Pertanyaan privasi</h2>
+    <p>Hubungi kami melalui WhatsApp{site.email && <> atau <a href={`mailto:${site.email}`}>{site.email}</a></>} untuk pertanyaan terkait data Anda.</p>
+  </div></div></section>
+</MarketingLayout>

@@ -1,0 +1,18 @@
+---
+const { entry } = Astro.props;
+const d = entry.data;
+---
+<article class="portfolio-card cell">
+  {d.coverImage && (
+    <a href={`/portofolio/${entry.slug}/`} class="portfolio-img-wrap" tabindex="-1" aria-hidden="true">
+      <img src={d.coverImage} alt={d.coverAlt ?? d.title} width="600" height="400" loading="lazy" class="portfolio-img" />
+    </a>
+  )}
+  <span class="portfolio-tag">{d.category}</span>
+  <h3 class="portfolio-title"><a class="title-link" href={`/portofolio/${entry.slug}/`}>{d.title}</a></h3>
+  <p class="portfolio-desc">{d.description}</p>
+  <a class="portfolio-more" href={`/portofolio/${entry.slug}/`}>
+    <span>Lihat Studi Kasus</span>
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  </a>
+</article>

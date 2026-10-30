@@ -1,0 +1,23 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import FAQList from '../components/FAQList.astro';
+import { locationGroups } from '../data/locations';
+import { faqs } from '../data/faqs';
+---
+<MarketingLayout title="Area Layanan" description="Cakupan layanan untuk UMKM di Jawa Timur, perbedaan layanan remote dan onsite, serta cara mengonfirmasi ketersediaan."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Area Layanan' }]}>
+  <PageHero title="Area layanan di Jawa Timur" lead="Layanan ditujukan bagi UMKM di Jawa Timur. Daftar di bawah adalah wilayah yang dapat dibahas; ketersediaan dikonfirmasi saat konsultasi." />
+  <section class="section"><div class="container cols-2">
+    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan jarak jauh</h2><p class="muted">Konsultasi, perencanaan, dan banyak pekerjaan digital dapat dilakukan tanpa bertemu langsung.</p></div>
+    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan onsite</h2><p class="muted">Pekerjaan yang butuh kehadiran, seperti pengambilan gambar, bergantung pada ketersediaan. Biaya perjalanan dapat berlaku.</p></div>
+  </div></section>
+  <section class="section section--tint"><div class="container">
+    <h2 style="margin-bottom:.75rem">Daftar wilayah</h2>
+    <p class="muted" style="margin-bottom:2rem;max-width:40rem">Daftar ini menunjukkan cakupan, bukan lokasi kantor. Kami tidak memiliki kantor di setiap kota.</p>
+    <div class="cols-3">{locationGroups.map((g) => (<div class="panel"><h3>{g.name}</h3><div class="tags">{g.places.map((p) => <span class="tag">{p}</span>)}</div></div>))}</div>
+  </div></section>
+  <section class="section"><div class="container split"><h2>FAQ area layanan</h2><FAQList items={faqs.filter((f) => f.group === 'Lokasi')} /></div></section>
+  <ClosingCTA title="Cek ketersediaan di wilayah Anda" message="Halo, saya ingin mengecek ketersediaan layanan di wilayah saya." secondaryLabel="Lihat layanan" />
+</MarketingLayout>

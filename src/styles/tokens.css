@@ -1,0 +1,33 @@
+:root {
+  color-scheme: dark;
+  --dp-color-ground: #07090e;
+  --dp-color-ground-tint: #101522;
+  --dp-color-panel: #10141c;
+  --dp-color-accent: #ff951f;
+  --dp-color-accent-hover: #ffab4d;
+  --dp-color-whatsapp: #25d366;
+  --dp-color-whatsapp-hover: #2ee672;
+  --dp-color-value: #edcd8c;
+  --dp-color-ink: #f4f5f7;
+  --dp-color-ink-muted: #c9ced8;
+  --dp-color-line: #303139;
+  --dp-color-line-strong: #4a4c57;
+  --dp-typography-body-face: "IBM Plex Sans", "Financial Plex Sans", system-ui, sans-serif;
+  --dp-typography-data-face: "IBM Plex Mono", "Financial Plex Mono", ui-monospace, monospace;
+  --dp-typography-body: 1rem;
+  --dp-typography-supporting: 0.875rem;
+  --dp-typography-metadata: 0.8125rem;
+  --dp-typography-body-leading: 1.6;
+  --dp-typography-reading-leading: 1.65;
+  --dp-spacing-cluster-gap: 1.5rem;
+  --dp-spacing-compact-gap: 0.75rem;
+  --dp-radius-panel: 5px;
+  --dp-radius-editorial: 4px;
+  --dp-radius-control: 40px;
+  --dp-border-hairline: 1px;
+  --dp-motion-interaction: 160ms;
+  --dp-motion-easing: ease;
+  --container: 74rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --section-y: clamp(3.5rem, 8vw, 5rem);
+}

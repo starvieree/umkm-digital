@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { breadcrumbSchema } from '../utils/schema';
+const { breadcrumbs, schema = [], ...rest } = Astro.props;
+const all = breadcrumbs ? [...schema, breadcrumbSchema(breadcrumbs)] : schema;
+---
+<BaseLayout {...rest} schema={all}>
+  <Header />
+  {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
+  <main id="konten"><slot /></main>
+  <Footer />
+</BaseLayout>

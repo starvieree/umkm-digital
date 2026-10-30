@@ -1,0 +1,117 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQList from '../components/FAQList.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import Button from '../components/Button.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { services } from '../data/services';
+import { faqs } from '../data/faqs';
+import { site } from '../data/site';
+import { organizationSchema, websiteSchema } from '../utils/schema';
+const projects = (await getCollection('portfolio', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
+const posts = (await getCollection('blog', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
+const problems = [
+  ['Konten promosi', 'Sulit menemukan ide dan waktu membuat konten.', 'jasa-video-pendek'],
+  ['Media sosial', 'Akun belum dikelola secara konsisten.', 'pengelolaan-media-sosial'],
+  ['Marketplace', 'Produk belum tertata dan jelas bagi pembeli.', 'manajemen-marketplace'],
+  ['Iklan digital', 'Bingung memulai dan memantau iklan.', 'jasa-iklan-digital'],
+  ['Website bisnis', 'Belum punya tempat resmi untuk profil usaha.', 'jasa-pembuatan-website'],
+];
+const steps = [['Hubungi lewat WhatsApp', 'Sampaikan usaha dan kebutuhan Anda.'], ['Diskusi kebutuhan', 'Kami bahas tujuan dan kondisi bisnis.'], ['Sepakati ruang lingkup', 'Pekerjaan dan penawaran dijelaskan lebih dulu.'], ['Pengerjaan', 'Dikerjakan sesuai kesepakatan.'], ['Serah terima', 'Hasil diserahkan atau dievaluasi.']];
+const why = [['Disesuaikan kebutuhan', 'Layanan dipilih dan disusun sesuai kondisi usaha.'], ['Ruang lingkup jelas', 'Apa yang termasuk dan tidak dijelaskan sejak awal.'], ['Komunikasi terbuka', 'Konsultasi langsung lewat WhatsApp.'], ['Evaluasi disepakati', 'Ukuran keberhasilan dibahas bersama, tanpa janji hasil pasti.']];
+---
+<MarketingLayout title={site.name} description={site.description} schema={[organizationSchema(), websiteSchema()]}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Bantu bisnis UMKM Jawa Timur berkembang lewat solusi digital</h1>
+        <p class="lead">Video pendek, marketplace, media sosial, iklan, hingga website. Dipilih sesuai kebutuhan dan ruang lingkup usaha Anda.</p>
+        <div class="row">
+          <WhatsAppCTA />
+          <Button href="/layanan/" variant="secondary">Lihat layanan</Button>
+        </div>
+        <p class="hero-note">Konsultasi awal untuk memilih layanan yang sesuai.</p>
+      </div>
+      <div class="frame" aria-label="Ringkasan layanan">
+        <p class="eyebrow">Layanan tersedia</p>
+        <p class="big">06</p>
+        <p class="muted" style="font-size:var(--dp-typography-supporting)">kategori layanan digital untuk UMKM</p>
+        <ul>{services.map((s) => (<li><span>{s.name}</span></li>))}</ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="facts">
+      <div><p class="eyebrow">Layanan</p><p class="num">06</p><p>Kategori layanan, masing-masing dengan halaman sendiri.</p></div>
+      <div><p class="eyebrow">Wilayah</p><p class="num">Jawa Timur</p><p>Cakupan layanan; ketersediaan per wilayah dikonfirmasi.</p></div>
+      <div><p class="eyebrow">Konsultasi</p><p class="num">WhatsApp</p><p>Kanal utama untuk bertanya dan meminta penawaran.</p></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container split">
+      <h2>Kebutuhan digital UMKM yang kami bantu</h2>
+      <div class="matrix matrix--2">
+        {problems.map(([t, d, slug]) => (
+          <article class="cell"><h3>{t}</h3><p>{d}</p><a class="more" href={`/layanan/${slug}/`}>Lihat solusinya<span class="sr-only"> untuk {t}</span></a></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head"><h2>Enam layanan untuk bisnis Anda</h2><p class="muted">Pilih layanan yang sesuai, atau gabungkan beberapa sesuai kebutuhan.</p></div>
+      <div class="matrix">{services.map((s, i) => <ServiceCard service={s} index={i} />)}</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Cara kerja</h2><p class="muted">Proses umum. Detailnya menyesuaikan layanan yang dipilih.</p></div>
+      <ol class="steps">{steps.map(([t, d]) => (<li><h3>{t}</h3><p>{d}</p></li>))}</ol>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head"><h2>Portofolio pilihan</h2><Button href="/portofolio/" variant="text">Semua portofolio</Button></div>
+      {projects.length ? (<div class="matrix">{projects.map((e) => <PortfolioCard entry={e} />)}</div>) : (<p class="empty">Portofolio sedang disiapkan. Kami hanya menampilkan pekerjaan nyata yang sudah mendapat izin publikasi.</p>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <h2>Pendekatan kerja kami</h2>
+      <ul class="checklist">{why.map(([t, d]) => (<li><strong style="color:var(--dp-color-ink);font-weight:500">{t}.</strong> {d}</li>))}</ul>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Wawasan & Panduan</p>
+          <h2>Artikel & Tips Bisnis Digital</h2>
+        </div>
+        <Button href="/blog/" variant="text" arrow>Lihat semua artikel</Button>
+      </div>
+      <div class="blog-grid">
+        {posts.map((post) => <ArticleCard entry={post} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div><h2>Pertanyaan yang sering diajukan</h2><div style="margin-top:1.5rem"><Button href="/faq/" variant="secondary">Lihat semua FAQ</Button></div></div>
+      <FAQList items={faqs.slice(0, 5)} />
+    </div>
+  </section>
+  <ClosingCTA />
+</MarketingLayout>

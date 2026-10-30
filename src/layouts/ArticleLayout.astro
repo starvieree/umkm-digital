@@ -1,0 +1,379 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { formatDate } from '../utils/seo';
+import { articleSchema } from '../utils/schema';
+import { services } from '../data/services';
+
+const {
+  title,
+  description,
+  category,
+  pubDate,
+  updatedDate,
+  author = 'Ainur Reza',
+  readTime,
+  coverImage,
+  coverAlt,
+  summary,
+  headings = [],
+  relatedPosts = [],
+  popularPosts = [],
+  section = 'Blog',
+  sectionHref = '/blog/'
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const isBlog = section === 'Blog';
+const authorName = isBlog ? 'Ainur Reza' : (author || 'Ainur Reza');
+
+// Filter headings for Table of Contents (H2 and H3)
+const tocHeadings = (headings || []).filter((h: any) => h.depth === 2 || h.depth === 3);
+---
+
+<MarketingLayout
+  title={title}
+  description={description}
+  ogType="article"
+  image={coverImage}
+  breadcrumbs={[
+    { label: 'Beranda', href: '/' },
+    { label: section, href: sectionHref },
+    { label: title }
+  ]}
+  schema={[
+    articleSchema({
+      title,
+      description,
+      path,
+      pubDate,
+      updatedDate,
+      author: authorName
+    })
+  ]}
+>
+  <article class="section article-page-section">
+    <div class="container article-container">
+      {isBlog ? (
+        <div class="article-layout-grid">
+          {/* Main Column: Judul, Meta, Cover, Ringkasan, TOC, Isi, Share, Identitas Penulis */}
+          <div class="article-main-column">
+            {category && <p class="eyebrow">{category}</p>}
+            <h1 class="article-main-title">{title}</h1>
+
+            {/* Metadata bar: Penulis, Tanggal, Durasi Baca */}
+            <div class="article-meta-bar">
+              <span class="meta-item meta-author">
+                <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span class="meta-text">{authorName}</span>
+              </span>
+              <span class="meta-sep" aria-hidden="true">•</span>
+              <time class="meta-item meta-date" datetime={pubDate ? pubDate.toISOString() : undefined}>
+                <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="meta-text">{pubDate ? formatDate(pubDate) : ''}</span>
+              </time>
+              {readTime && (
+                <>
+                  <span class="meta-sep" aria-hidden="true">•</span>
+                  <span class="meta-item meta-readtime">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span class="meta-text">{readTime}</span>
+                  </span>
+                </>
+              )}
+            </div>
+
+            {/* Featured Cover Image with Alt and Caption */}
+            {coverImage && (
+              <figure class="article-cover-figure">
+                <img
+                  src={coverImage}
+                  alt={coverAlt ?? title}
+                  width="1200"
+                  height="630"
+                  class="article-cover-img"
+                />
+                {coverAlt && <figcaption class="article-caption">{coverAlt}</figcaption>}
+              </figure>
+            )}
+
+            {/* Ringkasan Artikel (Summary Box) */}
+            {summary && summary.length > 0 && (
+              <aside class="article-summary-card" aria-label="Ringkasan Artikel">
+                <div class="summary-header">
+                  <svg class="summary-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
+                  <h2 class="summary-title">Ringkasan Artikel</h2>
+                </div>
+                <ul class="summary-list">
+                  {summary.map((item: string) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </aside>
+            )}
+
+            {/* Daftar Isi (Collapsible Table of Contents) */}
+            {tocHeadings.length > 0 && (
+              <details class="article-toc" open>
+                <summary class="toc-summary">
+                  <span class="toc-summary-left">
+                    <svg class="toc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="8" y1="6" x2="21" y2="6"/>
+                      <line x1="8" y1="12" x2="21" y2="12"/>
+                      <line x1="8" y1="18" x2="21" y2="18"/>
+                      <line x1="3" y1="6" x2="3.01" y2="6"/>
+                      <line x1="3" y1="12" x2="3.01" y2="12"/>
+                      <line x1="3" y1="18" x2="3.01" y2="18"/>
+                    </svg>
+                    <span class="toc-title">Daftar Isi</span>
+                  </span>
+                  <span class="toc-summary-right">
+                    <span class="toc-toggle-hint">Buka / Tutup</span>
+                    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </span>
+                </summary>
+                <nav class="toc-body" aria-label="Daftar Isi Konten">
+                  <ol class="toc-list">
+                    {tocHeadings.map((h: any) => (
+                      <li class={`toc-item toc-depth-${h.depth}`}>
+                        <a href={`#${h.slug}`} class="toc-link">{h.text}</a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              </details>
+            )}
+
+            {/* Prose Article Body */}
+            <div class="prose article-prose">
+              <slot />
+            </div>
+
+            {/* Share Box & Author Card */}
+            <div class="article-footer-area">
+              <div class="article-share-box">
+                <div class="share-label">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                  </svg>
+                  <span>Bagikan Artikel Ini:</span>
+                </div>
+                <div class="share-buttons">
+                  <a
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' - https://umkmdigital.id' + path)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="share-btn share-wa"
+                    aria-label="Bagikan ke WhatsApp"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.101-.477-.15-.678.15-.201.3-.777.979-.953 1.179-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.895-.799-1.5-1.786-1.676-2.087-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.238-.244-.588-.492-.508-.678-.517-.176-.008-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512s1.079 2.912 1.23 3.113c.15.2 2.124 3.244 5.145 4.549.718.31 1.279.496 1.716.635.722.23 1.379.197 1.9.12.58-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.2-.577-.35zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.405A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://umkmdigital.id' + path)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="share-btn share-fb"
+                    aria-label="Bagikan ke Facebook"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span>Facebook</span>
+                  </a>
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent('https://umkmdigital.id' + path)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="share-btn share-x"
+                    aria-label="Bagikan ke X"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span>X</span>
+                  </a>
+                  <button
+                    type="button"
+                    class="share-btn share-copy"
+                    id="btnCopyShare"
+                    aria-label="Salin tautan artikel ke clipboard"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                    </svg>
+                    <span id="copyShareText">Salin Tautan</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Author Card: Ainur Reza */}
+              <div class="author-bio-card">
+                <div class="author-avatar-col">
+                  <div class="author-avatar-img">AR</div>
+                </div>
+                <div class="author-content-col">
+                  <div class="author-title-row">
+                    <h3 class="author-name">Ainur Reza</h3>
+                    <span class="author-role-badge">Digital Marketing Specialist</span>
+                  </div>
+                  <p class="author-desc">
+                    Praktisi pemasaran digital dan konsultan UMKM yang berfokus membantu pelaku usaha lokal bertumbuh lewat strategi konten kreatif, optimasi marketplace, dan kehadiran website bisnis yang berdaya saing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Aside Column: Artikel Populer (3 saja) + Card Semua Paket */}
+          <aside class="article-sidebar" aria-label="Sidebar Artikel">
+            {/* Widget 1: Artikel Populer (3 saja) */}
+            {popularPosts && popularPosts.length > 0 && (
+              <div class="sidebar-widget sidebar-popular-widget">
+                <div class="sidebar-widget-header">
+                  <div class="widget-header-title">
+                    <svg class="popular-fire-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <h3 class="sidebar-widget-title">Artikel Populer</h3>
+                  </div>
+                </div>
+                <div class="popular-posts-list">
+                  {popularPosts.slice(0, 3).map((post: any, idx: number) => {
+                    const pd = post.data;
+                    return (
+                      <a href={`/blog/${post.slug}/`} class="popular-post-card">
+                        <span class="popular-post-num">{String(idx + 1).padStart(2, '0')}</span>
+                        {pd.coverImage && (
+                          <div class="popular-post-thumb">
+                            <img src={pd.coverImage} alt={pd.coverAlt ?? pd.title} loading="lazy" />
+                          </div>
+                        )}
+                        <div class="popular-post-info">
+                          <h4 class="popular-post-heading">{pd.title}</h4>
+                          <span class="popular-post-date">{formatDate(pd.pubDate)}</span>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Widget 2: Card Semua Paket */}
+            <div class="sidebar-widget sidebar-packages-widget">
+              <div class="pkg-card-top">
+                <span class="pkg-card-pill">Paket Unggulan</span>
+                <h3 class="pkg-card-title">Semua Paket Layanan</h3>
+                <p class="pkg-card-text">Layanan digital terintegrasi untuk akselerasi pertumbuhan omzet bisnis UMKM Anda:</p>
+              </div>
+              <ul class="pkg-card-list">
+                {services.map((s) => (
+                  <li class="pkg-card-item">
+                    <a href={`/layanan/${s.slug}/`} class="pkg-card-link">
+                      <span class="pkg-card-check">✓</span>
+                      <span class="pkg-card-name">{s.name}</span>
+                      <svg class="pkg-card-arr" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 12l4-4-4-4"/></svg>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div class="pkg-card-actions">
+                <a href="/layanan/" class="btn btn--primary pkg-btn-primary">
+                  <span>Lihat Semua Paket</span>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20UMKM%20Digital%2C%20saya%20ingin%20konsultasi%20paket%20layanan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--secondary pkg-btn-wa"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.101-.477-.15-.678.15-.201.3-.777.979-.953 1.179-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.895-.799-1.5-1.786-1.676-2.087-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.238-.244-.588-.492-.508-.678-.517-.176-.008-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512s1.079 2.912 1.23 3.113c.15.2 2.124 3.244 5.145 4.549.718.31 1.279.496 1.716.635.722.23 1.379.197 1.9.12.58-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.2-.577-.35zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.405A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                  <span>Konsultasi Paket</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      ) : (
+        /* Portfolio detail fallback */
+        <div class="portfolio-detail-wrapper" style="max-width:50rem;margin-inline:auto">
+          {category && <p class="eyebrow">{category}</p>}
+          <h1 class="article-main-title">{title}</h1>
+          {description && <p class="lead">{description}</p>}
+          {coverImage && (
+            <figure class="article-cover-figure">
+              <img src={coverImage} alt={coverAlt ?? title} width="1200" height="630" class="article-cover-img" />
+              {coverAlt && <figcaption class="article-caption">{coverAlt}</figcaption>}
+            </figure>
+          )}
+          <div class="prose article-prose"><slot /></div>
+        </div>
+      )}
+    </div>
+  </article>
+
+  {/* Artikel Terkait (3 Artikel Sebelum CTA) */}
+  {isBlog && relatedPosts && relatedPosts.length > 0 && (
+    <section class="section article-related-section">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:2.25rem">
+          <p class="eyebrow">Rekomendasi</p>
+          <h2 style="font-size:clamp(1.6rem,3.2vw,2.25rem);margin-top:.35rem">Artikel Terkait Lainnya</h2>
+          <p class="lead" style="max-width:36rem;margin-inline:auto">Eksplorasi wawasan dan strategi digital terkini untuk mempercepat pertumbuhan bisnis UMKM Anda.</p>
+        </div>
+        <div class="blog-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+          {relatedPosts.slice(0, 3).map((post: any) => (
+            <ArticleCard entry={post} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <ClosingCTA secondaryHref="/layanan/" secondaryLabel="Lihat layanan" />
+
+  {/* Clipboard script */}
+  {isBlog && (
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('btnCopyShare');
+        const txt = document.getElementById('copyShareText');
+        if (btn && txt) {
+          btn.addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(window.location.href);
+              const original = txt.textContent;
+              txt.textContent = 'Tersalin!';
+              btn.classList.add('is-copied');
+              setTimeout(() => {
+                txt.textContent = original;
+                btn.classList.remove('is-copied');
+              }, 2200);
+            } catch (err) {
+              console.error('Failed to copy', err);
+            }
+          });
+        }
+      });
+    </script>
+  )}
+</MarketingLayout>

@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', (e) => !e.data.draft);
+  return posts.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+const d = entry.data;
+
+const allPublished = await getCollection('blog', (e) => !e.data.draft);
+const otherPosts = allPublished.filter((e) => e.slug !== entry.slug);
+
+// 3 Artikel Terkait
+const relatedPosts = [...otherPosts]
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+// 3 Artikel Populer untuk Aside
+const popularPosts = [...otherPosts]
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const rawWords = (entry.body || '').split(/\s+/).filter(Boolean).length;
+const readTime = `${Math.max(2, Math.ceil(rawWords / 160))} menit baca`;
+---
+<ArticleLayout
+  title={d.title}
+  description={d.description}
+  category={d.category}
+  pubDate={d.pubDate}
+  updatedDate={d.updatedDate}
+  author={d.author || 'Ainur Reza'}
+  readTime={readTime}
+  coverImage={d.coverImage}
+  coverAlt={d.coverAlt}
+  summary={d.summary}
+  headings={headings}
+  relatedPosts={relatedPosts}
+  popularPosts={popularPosts}
+  section="Blog"
+  sectionHref="/blog/"
+>
+  <Content />
+</ArticleLayout>

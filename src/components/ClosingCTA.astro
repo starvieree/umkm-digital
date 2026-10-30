@@ -1,0 +1,17 @@
+---
+import WhatsAppCTA from './WhatsAppCTA.astro';
+import Button from './Button.astro';
+const { title = 'Diskusikan kebutuhan digital bisnis Anda', text = 'Ceritakan usaha dan tujuan Anda. Kami bantu menentukan layanan dan ruang lingkup yang sesuai.', message, secondaryHref = '/layanan/', secondaryLabel = 'Lihat layanan' } = Astro.props;
+---
+<section class="closing">
+  <div class="container">
+    <div>
+      <h2>{title}</h2>
+      <p class="lead">{text}</p>
+    </div>
+    <div class="row">
+      <WhatsAppCTA message={message} />
+      <Button href={secondaryHref} variant="secondary">{secondaryLabel}</Button>
+    </div>
+  </div>
+</section>

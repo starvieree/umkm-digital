@@ -1,0 +1,17 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { getCollection } from 'astro:content';
+const items = (await getCollection('portfolio', (e) => !e.data.draft)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<MarketingLayout title="Portofolio" description="Contoh pekerjaan dan studi kasus layanan digital untuk UMKM."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Portofolio' }]}>
+  <PageHero title="Portofolio dan studi kasus" lead="Contoh pekerjaan yang sudah mendapat izin untuk dipublikasikan." />
+  <section class="section"><div class="container">
+    {items.length ? <div class="matrix">{items.map((e) => <PortfolioCard entry={e} />)}</div>
+      : <p class="empty">Portofolio sedang disiapkan. Kami hanya menampilkan pekerjaan nyata dengan izin publikasi. Anda tetap bisa berkonsultasi tentang proyek serupa.</p>}
+  </div></section>
+  <ClosingCTA title="Diskusikan proyek serupa" secondaryLabel="Lihat layanan" />
+</MarketingLayout>

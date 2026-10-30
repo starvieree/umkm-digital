@@ -1,0 +1,45 @@
+---
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import JsonLd from '../components/JsonLd.astro';
+import { site } from '../data/site';
+import { absUrl, pageTitle } from '../utils/seo';
+const { title, description = site.description, image = '/og/default.webp', ogType = 'website', schema = [] } = Astro.props;
+const canonical = absUrl(Astro.url.pathname);
+const t = pageTitle(title);
+---
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:title" content={t} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absUrl(image)} />
+    <meta property="og:image:alt" content={`${site.name} — ${site.tagline}`} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absUrl(image)} />
+    {schema.map((d) => <JsonLd data={d} />)}
+    <script is:inline>document.documentElement.classList.add('js')</script>
+  </head>
+  <body>
+    <a href="#konten" class="skip-link">Lewati ke konten utama</a>
+    <slot />
+  </body>
+</html>

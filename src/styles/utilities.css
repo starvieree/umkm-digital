@@ -1,0 +1,7 @@
+.container { width: min(100% - 2 * var(--gutter), var(--container)); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.muted { color: var(--dp-color-ink-muted); }
+.mono { font-family: var(--dp-typography-data-face); font-variant-numeric: tabular-nums; }
+.value { color: var(--dp-color-value); }
+.stack > * + * { margin-top: var(--dp-spacing-cluster-gap); }
+.row { display: flex; flex-wrap: wrap; gap: var(--dp-spacing-compact-gap); align-items: center; }

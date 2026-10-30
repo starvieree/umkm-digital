@@ -1,0 +1,30 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+const values = [['Komunikasi jelas', 'Kami menjelaskan proses dan perkembangan pekerjaan.'], ['Ruang lingkup transparan', 'Yang termasuk dan tidak termasuk dibahas sejak awal.'], ['Solusi sesuai kebutuhan', 'Layanan disesuaikan dengan kondisi usaha Anda.'], ['Evaluasi sesuai kesepakatan', 'Ukuran keberhasilan ditentukan bersama.']];
+---
+<MarketingLayout title="Tentang Kami" description="Kenali layanan digital untuk UMKM Jawa Timur: latar belakang, prinsip kerja, dan cara kami bekerja bersama klien."
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Tentang Kami' }]}>
+  <PageHero title="Tentang kami" lead="Kami membantu UMKM di Jawa Timur memanfaatkan kanal digital dengan cara yang jelas dan terukur." />
+  <section class="section"><div class="container split">
+    <h2>Latar belakang</h2>
+    <div class="prose">
+      <p>Banyak pelaku UMKM butuh dukungan digital, tetapi belum tahu layanan mana yang sesuai, apa yang termasuk di dalamnya, dan bagaimana memulainya.</p>
+      <p>Website ini dibuat agar Anda bisa memahami layanan, proses kerja, dan langkah konsultasi sebelum menghubungi kami.</p>
+      <!-- GANTI: tambahkan cerita bisnis faktual, visi/misi, dan profil tim hanya jika sudah dikonfirmasi pemilik usaha. -->
+    </div>
+  </div></section>
+  <section class="section section--tint"><div class="container">
+    <h2 style="margin-bottom:2rem">Prinsip kerja</h2>
+    <div class="matrix matrix--2">{values.map(([t, d]) => (<article class="cell"><h3>{t}</h3><p>{d}</p></article>))}</div>
+  </div></section>
+  <section class="section"><div class="container split">
+    <h2>Wilayah dan metode layanan</h2>
+    <div class="prose">
+      <p>Layanan jarak jauh dapat dibahas untuk UMKM di seluruh Jawa Timur. Layanan tatap muka tergantung ketersediaan dan perlu dikonfirmasi per wilayah.</p>
+      <p>Kami tidak memiliki kantor di setiap kota. Lihat <a href="/area-layanan/">area layanan</a> untuk detailnya.</p>
+    </div>
+  </div></section>
+  <ClosingCTA title="Kenali layanan kami lebih lanjut" />
+</MarketingLayout>
