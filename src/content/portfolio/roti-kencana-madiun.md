@@ -5,7 +5,7 @@ pubDate: 2026-10-15
 category: "Pengelolaan Media Sosial"
 coverImage: "/images/portfolio/roti-kencana-media-sosial.webp"
 coverAlt: "Desain konten feed Instagram estetik aneka kue dan roti UMKM"
-author: "Tim UMKM Digital"
+author: "Tim Buatin UMKM"
 draft: false
 ---
 

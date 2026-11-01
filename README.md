@@ -1,11 +1,11 @@
-# 🚀 UMKM Digital — Solusi Pemasaran Digital Praktis UMKM Jawa Timur
+# 🚀 Buatin UMKM — Solusi Pemasaran Digital Praktis UMKM Jawa Timur
 
 [![Astro](https://img.shields.io/badge/Astro-v4.16-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-v5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/License-Private-grey.svg)]()
-[![Performance](https://img.shields.io/badge/Lighthouse-100-success?logo=lighthouse)](https://umkmdigital.id)
+[![Performance](https://img.shields.io/badge/Lighthouse-100-success?logo=lighthouse)](https://buatinumkm.web.id)
 
-Platform website resmi **UMKM Digital** — layanan pendampingan dan solusi pemasaran digital terpadu untuk pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) di wilayah Jawa Timur (Surabaya Raya, Malang Raya, Mataraman, Tapal Kuda, hingga Pantura & Madura).
+Platform website resmi **Buatin UMKM** — layanan pendampingan dan solusi pemasaran digital terpadu untuk pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) di wilayah Jawa Timur (Surabaya Raya, Malang Raya, Mataraman, Tapal Kuda, hingga Pantura & Madura).
 
 Website ini dibangun menggunakan **[Astro](https://astro.build)** dengan pendekatan **Static Site Generation (SSG)** yang ultra-cepat, hemat sumber daya, mobile-first, dan dioptimasi secara mendalam untuk mesin pencari (**SEO**) serta AI search engines (**AEO**).
 
@@ -48,8 +48,8 @@ Website ini dibangun menggunakan **[Astro](https://astro.build)** dengan pendeka
 | Layanan | Deskripsi Singkat | Slug URL |
 | :--- | :--- | :--- |
 | **Jasa Video Pendek** | Riset hook, pengambilan video, dan editing dinamis vertikal 9:16 untuk TikTok, Reels, dan Shorts. | `/layanan/jasa-video-pendek` |
-| **Live Streaming Commerce** | Pendampingan teknis siaran, skenario alur live shopping, tata etalase, dan pelatihan host. | `/layanan/jasa-live-commerce` |
-| **Setup & Manajemen Marketplace** | Dekorasi toko, standarisasi foto katalog, optimasi SEO judul produk di Shopee & Tokopedia. | `/layanan/manajemen-marketplace` |
+| **Jasa SEO & Penulisan Artikel** | Riset kata kunci, optimasi SEO on-page, dan artikel blog bisnis mendalam untuk peringkat 1 Google. | `/layanan/jasa-seo-artikel` |
+| **Hosting & Optimasi Website** | Migrasi server cepat, pemeliharaan keamanan berkala, dan optimasi Core Web Vitals Google 90+. | `/layanan/hosting-optimasi-website` |
 | **Pengelolaan Media Sosial** | Kalender konten bulanan, desain visual feed, penulisan caption persuasif, dan posting terjadwal. | `/layanan/pengelolaan-media-sosial` |
 | **Jasa Iklan Digital** | Riset target audiens, materi kreatif, dan pengelolaan kampanye Meta Ads & TikTok Ads terukur. | `/layanan/jasa-iklan-digital` |
 | **Jasa Pembuatan Website** | Pembuatan website profil bisnis dan katalog online yang ringan, elegan, dan siap terima pesanan. | `/layanan/jasa-pembuatan-website` |
@@ -108,7 +108,7 @@ umkm-digital/
 │   │   └── MarketingLayout.astro
 │   ├── pages/                  # Routing halaman web (File-based routing)
 │   │   ├── index.astro         # Beranda utama
-│   │   ├── tentang-kami.astro  # Profil UMKM Digital & latar belakang
+│   │   ├── tentang-kami.astro  # Profil Buatin UMKM & latar belakang
 │   │   ├── layanan.astro       # Halaman indeks katalog layanan
 │   │   ├── layanan/            # Halaman detail masing-masing layanan
 │   │   ├── portofolio.astro    # Halaman galeri portofolio
@@ -215,7 +215,7 @@ pubDate: 2026-10-15
 category: "Live Commerce"
 coverImage: "/images/portfolio/kripik-tempe.webp"
 coverAlt: "Kemasan Kripik Tempe Malang"
-author: "Tim UMKM Digital"
+author: "Tim Buatin UMKM"
 draft: false
 summary:
   - "Peningkatan interaksi penonton live sebesar 140%."
@@ -247,10 +247,10 @@ Proyek ini telah dikonfigurasi dengan standar pencarian modern:
 
 ## 📞 Kontak & Informasi Bisnis
 
-- **Entitas**: UMKM Digital Jawa Timur
-- **Situs Resmi**: [https://umkmdigital.id](https://umkmdigital.id)
+- **Entitas**: Buatin UMKM Jawa Timur
+- **Situs Resmi**: [https://buatinumkm.web.id](https://buatinumkm.web.id)
 - **WhatsApp**: [+62 889-8964-3555](https://wa.me/6288989643555)
-- **Email**: [halo@umkmdigital.id](mailto:halo@umkmdigital.id)
+- **Email**: [halo@buatinumkm.web.id](mailto:halo@buatinumkm.web.id)
 - **Domisili**: Surabaya, Jawa Timur, Indonesia
 - **Jam Operasional**: Senin – Sabtu, 08.00 – 18.00 WIB
 

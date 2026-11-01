@@ -1,13 +1,13 @@
 export const site = {
-  name: 'UMKM Digital',
-  legalName: 'UMKM Digital Jawa Timur',
+  name: 'Buatin UMKM',
+  legalName: 'Buatin UMKM Jawa Timur',
   tagline: 'Solusi Pemasaran Digital Praktis untuk UMKM Jawa Timur',
   description:
-    'Layanan produksi video pendek TikTok & Reels, live streaming commerce, optimasi marketplace, pengelolaan medsos, iklan Meta & TikTok Ads, serta pembuatan website bisnis untuk UMKM di Jawa Timur.',
-  url: 'https://umkmdigital.id',
+    'Layanan produksi video pendek TikTok & Reels, jasa SEO & penulisan artikel, hosting & optimasi website, pengelolaan medsos, iklan Meta & TikTok Ads, serta pembuatan website bisnis untuk UMKM di Jawa Timur.',
+  url: 'https://buatinumkm.web.id',
   whatsapp: '6288989643555',
   phone: '+6288989643555',
-  email: 'halo@umkmdigital.id',
+  email: 'halo@buatinumkm.web.id',
   address: 'Surabaya, Jawa Timur, Indonesia',
   city: 'Surabaya',
   region: 'Jawa Timur',
@@ -26,8 +26,8 @@ export const site = {
   openingHours: 'Mo,Tu,We,Th,Fr,Sa 08:00-18:00',
   freeConsultation: true,
   social: [
-    { label: 'Instagram', href: 'https://instagram.com/umkmdigital.id' },
-    { label: 'TikTok', href: 'https://tiktok.com/@umkmdigital.id' },
+    { label: 'Instagram', href: 'https://instagram.com/buatinumkm.web.id' },
+    { label: 'TikTok', href: 'https://tiktok.com/@buatinumkm.web.id' },
     { label: 'WhatsApp', href: 'https://wa.me/6288989643555' }
   ],
   locale: 'id_ID',

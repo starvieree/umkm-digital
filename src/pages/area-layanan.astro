@@ -8,7 +8,7 @@ import { faqs } from '../data/faqs';
 import { localBusinessSchema, faqSchema } from '../utils/schema';
 ---
 <MarketingLayout
-  title="Area Layanan UMKM Digital Jawa Timur (38 Kab/Kota)"
+  title="Area Layanan Buatin UMKM Jawa Timur (38 Kab/Kota)"
   description="Cakupan layanan pemasaran digital untuk UMKM di 38 kabupaten dan kota se-Jawa Timur. Layanan konsultasi online dan kunjungan onsite terkonfirmasi."
   breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Area Layanan' }]}
   schema={[
@@ -18,8 +18,8 @@ import { localBusinessSchema, faqSchema } from '../utils/schema';
 >
   <PageHero title="Jangkauan Layanan di Seluruh Jawa Timur" lead="Kami melayani pelaku UMKM di 38 kabupaten dan kota se-Jawa Timur. Layanan online tersedia penuh, sementara layanan tatap muka onsite disesuaikan dengan kesepakatan jadwal tim." />
   <section class="section"><div class="container cols-2">
-    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Online / Jarak Jauh</h2><p class="muted">Pembuatan website, optimasi marketplace, pengelolaan medsos, dan kampanye iklan dapat berjalan lancar via WhatsApp dan pertemuan online berkala.</p></div>
-    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Onsite / Hadir Langsung</h2><p class="muted">Khusus untuk sesi rekaman video produk di lokasi, setup studio siaran langsung, atau pendampingan tim kerja sesuai konfirmasi wilayah.</p></div>
+    <div class="panel panel--accent"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Online / Jarak Jauh</h2><p class="muted">Pembuatan website, optimasi SEO & artikel, hosting cepat, pengelolaan medsos, dan kampanye iklan dapat berjalan lancar via WhatsApp dan pertemuan online berkala.</p></div>
+    <div class="panel"><h2 style="font-size:1.4rem;margin-bottom:.75rem">Layanan Onsite / Hadir Langsung</h2><p class="muted">Khusus untuk sesi rekaman video produk di lokasi, optimasi teknis website, atau pendampingan tim kerja sesuai konfirmasi wilayah.</p></div>
   </div></section>
   <section class="section section--tint"><div class="container">
     <h2 style="margin-bottom:.75rem">Cakupan Wilayah Jawa Timur</h2>
@@ -27,5 +27,5 @@ import { localBusinessSchema, faqSchema } from '../utils/schema';
     <div class="cols-3">{locationGroups.map((g) => (<div class="panel"><h3>{g.name}</h3><div class="tags">{g.places.map((p) => <span class="tag">{p}</span>)}</div></div>))}</div>
   </div></section>
   <section class="section"><div class="container split"><h2>Pertanyaan Seputar Jangkauan Wilayah</h2><FAQList items={faqs.filter((f) => f.group === 'Lokasi')} /></div></section>
-  <ClosingCTA title="Cek Ketersediaan Layanan di Kota Anda" message="Halo, saya ingin menanyakan ketersediaan layanan UMKM Digital untuk wilayah saya." secondaryLabel="Lihat layanan" />
+  <ClosingCTA title="Cek Ketersediaan Layanan di Kota Anda" message="Halo, saya ingin menanyakan ketersediaan layanan Buatin UMKM untuk wilayah saya." secondaryLabel="Lihat layanan" />
 </MarketingLayout>

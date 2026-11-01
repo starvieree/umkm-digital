@@ -5,7 +5,7 @@ pubDate: 2026-10-12
 category: "Jasa Iklan Digital"
 coverImage: "/images/portfolio/madukara-iklan-digital.webp"
 coverAlt: "Display botol madu murni Madukara Pasuruan dengan materi iklan digital di tablet"
-author: "Tim UMKM Digital"
+author: "Tim Buatin UMKM"
 draft: false
 ---
 

@@ -20,4 +20,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://umkmdigital.id/sitemap-index.xml
+Sitemap: https://buatinumkm.web.id/sitemap-index.xml

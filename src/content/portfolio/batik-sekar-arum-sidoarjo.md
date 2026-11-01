@@ -5,7 +5,7 @@ pubDate: 2026-10-24
 category: "Jasa Video Pendek"
 coverImage: "/images/portfolio/batik-sekar-arum-video.webp"
 coverAlt: "Pengrajin batik Sekar Arum sedang memperagakan proses mencanting kain"
-author: "Tim UMKM Digital"
+author: "Tim Buatin UMKM"
 draft: false
 ---
 

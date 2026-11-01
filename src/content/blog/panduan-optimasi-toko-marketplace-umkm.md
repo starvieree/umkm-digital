@@ -17,7 +17,7 @@ Platform lokapasar (*marketplace*) seperti Shopee, Tokopedia, dan Lazada menyedi
 
 Banyak pemilik toko UMKM terjebak dalam perang harga murah (*price war*), mengorbankan margin laba bersih demi pesanan pertama. Padahal banting harga bukanlah strategi berkelanjutan. Konsumen marketplace saat ini tidak hanya mencari harga termurah, melainkan kejelasan informasi produk, kualitas foto yang meyakinkan, kecepatan pelayanan admin, dan reputasi ulasan toko yang solid.
 
-Jika Anda tidak memiliki waktu luang untuk mengelola detail teknis ini, kami menyediakan [layanan manajemen marketplace UMKM](/layanan/manajemen-marketplace/) yang siap membantu penataan toko secara menyeluruh. Bagi Anda yang ingin mengelolanya secara mandiri, panduan terstruktur berikut membedah langkah optimasi toko dari nol hingga menghasilkan penjualan konsisten.
+Jika Anda tidak memiliki waktu luang untuk mengelola detail teknis ini, kami menyediakan [layanan jasa pembuatan website katalog digital](/layanan/jasa-pembuatan-website/) serta strategi digital yang siap membantu penataan usaha secara menyeluruh. Bagi Anda yang ingin mengelolanya secara mandiri, panduan terstruktur berikut membedah langkah optimasi toko dari nol hingga menghasilkan penjualan konsisten.
 
 ## 4 Pondasi Optimasi Katalog Produk Marketplace (SEO Toko)
 
@@ -91,7 +91,7 @@ Setelah katalog tertata rapi, langkah berikutnya adalah memaksimalkan fitur prom
 - **Voucher Ikuti Toko (Follower Voucher):** Pasang voucher potongan belanja nominal kecil (misalnya diskon Rp3.000 minimal belanja Rp50.000) untuk mengubah pengunjung toko menjadi pengikut aktif.
 - **Paket Diskon Kombo (Bundling Hemat):** Pasangkan produk terlaris dengan produk pelengkap, misalnya membeli sambal botol gratis kerupuk mini. Strategi ini terbukti mendongkrak rata-rata nilai belanja per pembeli (*Average Order Value*).
 - **Aktifkan Seluruh Program Gratis Ongkir:** Program gratis ongkir bersubsidi merupakan faktor psikologis nomor satu penentu transaksi online di Indonesia. Pastikan toko terdaftar resmi dalam program gratis ongkir ekstra platform.
-- **Manfaatkan Fitur Live Streaming Commerce:** Melakukan siaran langsung minimal 1 jam sehari saat jam makan siang atau malam hari terbukti meningkatkan penjualan. Anda juga dapat menggunakan dukungan [jasa live streaming commerce UMKM](/layanan/jasa-live-commerce/) profesional.
+- **Manfaatkan Fitur Live Streaming Commerce:** Melakukan siaran langsung minimal 1 jam sehari saat jam makan siang atau malam hari terbukti meningkatkan penjualan, terutama jika dipadukan dengan strategi promosi [video pendek kreatif](/layanan/jasa-video-pendek/).
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>

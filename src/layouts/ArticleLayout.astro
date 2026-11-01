@@ -195,7 +195,7 @@ const activeSchema = isBlog
                 </div>
                 <div class="share-buttons">
                   <a
-                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' - https://umkmdigital.id' + path)}`}
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' - ' + site.url + path)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="share-btn share-wa"
@@ -205,7 +205,7 @@ const activeSchema = isBlog
                     <span>WhatsApp</span>
                   </a>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://umkmdigital.id' + path)}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(site.url + path)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="share-btn share-fb"
@@ -215,7 +215,7 @@ const activeSchema = isBlog
                     <span>Facebook</span>
                   </a>
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent('https://umkmdigital.id' + path)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(site.url + path)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="share-btn share-x"
@@ -323,7 +323,7 @@ const activeSchema = isBlog
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=${site.whatsapp}&text=Halo%20UMKM%20Digital%2C%20saya%20ingin%20konsultasi%20paket%20layanan`}
+                  href={`https://api.whatsapp.com/send?phone=${site.whatsapp}&text=Halo%20Buatin%20UMKM%2C%20saya%20ingin%20konsultasi%20paket%20layanan`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn--secondary pkg-btn-wa"

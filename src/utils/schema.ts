@@ -51,8 +51,8 @@ export const organizationSchema = () => ({
   knowsAbout: [
     'Pemasaran Digital UMKM',
     'Produksi Video Pendek Vertikal TikTok dan Reels',
-    'Live Streaming Commerce',
-    'Optimasi Marketplace Shopee dan Tokopedia',
+    'Jasa SEO dan Penulisan Artikel Bisnis',
+    'Hosting dan Optimasi Kecepatan Website',
     'Iklan Digital Meta Ads dan TikTok Ads',
     'Pembuatan Website Bisnis dan Toko Online'
   ]
@@ -99,8 +99,8 @@ export const localBusinessSchema = () => ({
     name: 'Layanan Pemasaran Digital UMKM',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Video Pendek TikTok & Reels' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Live Streaming Commerce' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Setup & Manajemen Marketplace' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa SEO & Penulisan Artikel' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hosting & Optimasi Website' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pengelolaan Media Sosial' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Iklan Digital Meta & TikTok Ads' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Pembuatan Website Profil & Katalog' } }

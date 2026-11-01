@@ -5,7 +5,7 @@ pubDate: 2026-10-26
 category: "Jasa Pembuatan Website"
 coverImage: "/images/portfolio/kopi-sambang-website.webp"
 coverAlt: "Tampilan website profil Kopi Sambang Malang pada layar laptop"
-author: "Tim UMKM Digital"
+author: "Tim Buatin UMKM"
 draft: false
 ---
 

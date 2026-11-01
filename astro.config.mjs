@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // GANTI `site` dengan domain produksi final (dipakai canonical, OG, dan sitemap).
 export default defineConfig({
-  site: 'https://umkmdigital.id',
+  site: 'https://buatinumkm.web.id',
   trailingSlash: 'always',
   build: { format: 'directory' },
   integrations: [sitemap()],

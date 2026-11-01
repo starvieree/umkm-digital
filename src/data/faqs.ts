@@ -1,7 +1,7 @@
 export interface Faq { group: string; q: string; a: string }
 
 export const faqs: Faq[] = [
-  { group: 'Layanan', q: 'Layanan apa saja yang tersedia?', a: 'Ada 6 layanan terpadu: produksi video pendek (TikTok/Reels), live streaming commerce, setup & manajemen marketplace, pengelolaan media sosial, kampanye iklan digital, serta pembuatan website bisnis.' },
+  { group: 'Layanan', q: 'Layanan apa saja yang tersedia?', a: 'Ada 6 layanan terpadu: produksi video pendek (TikTok/Reels), jasa SEO & penulisan artikel, hosting & optimasi website, pengelolaan media sosial, kampanye iklan digital, serta pembuatan website bisnis.' },
   { group: 'Layanan', q: 'Apakah layanan bisa disesuaikan dengan kebutuhan UMKM?', a: 'Tentu. Kami menyesuaikan ruang lingkup pekerjaan dengan skala usaha dan anggaran riil Anda, tanpa mewajibkan mengambil paket besar yang tidak diperlukan.' },
   { group: 'Layanan', q: 'Bisakah beberapa layanan digabung?', a: 'Bisa sekali. Anda bisa memadukan produksi video pendek dengan kelola medsos, atau pembuatan website dengan iklan digital untuk hasil yang lebih terpadu.' },
   { group: 'Harga', q: 'Bagaimana cara mendapatkan informasi harga?', a: 'Biaya dihitung transparan sesuai ruang lingkup yang disepakati (jumlah video, produk, atau fitur). Hubungi kami via WhatsApp untuk rincian penawaran tertulis.' },
