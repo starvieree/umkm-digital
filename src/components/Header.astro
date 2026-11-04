@@ -1,64 +1,130 @@
 ---
-import { mainNav } from '../data/navigation';
-import { site } from '../data/site';
-import WhatsAppCTA from './WhatsAppCTA.astro';
-const rawPath = Astro.url.pathname;
-const path = rawPath.length > 1 && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
-const isActive = (href: string) => (href === '/' ? path === '/' : path === href || path.startsWith(`${href}/`));
+import { mainNav } from "../data/navigation";
+import { site } from "../data/site";
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+let rawPath = Astro.url.pathname;
+if (rawPath.endsWith(".html")) {
+  rawPath = rawPath.slice(0, -5);
+}
+if (rawPath === "/index") {
+  rawPath = "/";
+}
+const path =
+  rawPath.length > 1 && rawPath.endsWith("/") ? rawPath.slice(0, -1) : rawPath;
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`);
 ---
+
 <header class="site-header">
   <div class="container">
     <a href="/" class="brand">
-      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="9" width="4" height="14" rx="1" fill="#ff951f"/><rect x="14" y="5" width="4" height="22" rx="1" fill="#ff951f"/><rect x="21" y="12" width="4" height="11" rx="1" fill="#edcd8c"/></svg>
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"
+        ><rect x="7" y="9" width="4" height="14" rx="1" fill="#ff951f"
+        ></rect><rect x="14" y="5" width="4" height="22" rx="1" fill="#ff951f"
+        ></rect><rect x="21" y="12" width="4" height="11" rx="1" fill="#edcd8c"
+        ></rect></svg
+      >
       <span>{site.name}</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Buka menu navigasi">
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Buka menu navigasi"
+    >
       <span class="nav-toggle-bar"></span>
       <span class="nav-toggle-bar"></span>
       <span class="nav-toggle-bar"></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
       <ul class="nav-list">
-        {mainNav.map((item, i) => (
-          <li class={item.children ? 'has-submenu' : ''}>
-            <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
-            {item.children && (
-              <>
-                <button class="sub-toggle" type="button" aria-expanded="false" aria-controls={`sub-${i}`} aria-label={`Buka submenu ${item.label}`}>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-                </button>
-                <ul class="submenu" id={`sub-${i}`}>
-                  {item.children.map((c) => (<li><a href={c.href} aria-current={path === c.href ? 'page' : undefined}>{c.label}</a></li>))}
-                </ul>
-              </>
-            )}
-          </li>
-        ))}
+        {
+          mainNav.map((item, i) => (
+            <li class={item.children ? "has-submenu" : ""}>
+              <a
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+              {item.children && (
+                <>
+                  <button
+                    class="sub-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls={`sub-${i}`}
+                    aria-label={`Buka submenu ${item.label}`}
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M2 4l4 4 4-4" />
+                    </svg>
+                  </button>
+                  <ul class="submenu" id={`sub-${i}`}>
+                    {item.children.map((c) => (
+                      <li>
+                        <a
+                          href={c.href}
+                          aria-current={path === c.href ? "page" : undefined}
+                        >
+                          {c.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </li>
+          ))
+        }
       </ul>
       <div class="header-cta"><WhatsAppCTA class="header-btn" /></div>
     </nav>
   </div>
 </header>
 <script>
-  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
-  const nav = document.getElementById('site-nav');
-  const subs = document.querySelectorAll<HTMLButtonElement>('.sub-toggle');
+  const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+  const subs = document.querySelectorAll<HTMLButtonElement>(".sub-toggle");
   const setSub = (b: HTMLButtonElement, open: boolean) => {
-    b.setAttribute('aria-expanded', String(open));
-    document.getElementById(b.getAttribute('aria-controls')!)?.toggleAttribute('data-open', open);
+    b.setAttribute("aria-expanded", String(open));
+    document
+      .getElementById(b.getAttribute("aria-controls")!)
+      ?.toggleAttribute("data-open", open);
   };
   const closeSubs = () => subs.forEach((b) => setSub(b, false));
-  toggle?.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(open));
-    nav?.toggleAttribute('data-open', open);
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    nav?.toggleAttribute("data-open", open);
   });
-  subs.forEach((b) => b.addEventListener('click', () => setSub(b, b.getAttribute('aria-expanded') !== 'true')));
-  document.addEventListener('click', (e) => { if (!(e.target as Element).closest('.nav-list > li')) closeSubs(); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key !== 'Escape') return;
-    const openSub = [...subs].find((b) => b.getAttribute('aria-expanded') === 'true');
-    closeSubs(); openSub?.focus();
-    if (toggle?.getAttribute('aria-expanded') === 'true') { toggle.click(); toggle.focus(); }
+  subs.forEach((b) =>
+    b.addEventListener("click", () =>
+      setSub(b, b.getAttribute("aria-expanded") !== "true"),
+    ),
+  );
+  document.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".nav-list > li")) closeSubs();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const openSub = [...subs].find(
+      (b) => b.getAttribute("aria-expanded") === "true",
+    );
+    closeSubs();
+    openSub?.focus();
+    if (toggle?.getAttribute("aria-expanded") === "true") {
+      toggle.click();
+      toggle.focus();
+    }
   });
 </script>

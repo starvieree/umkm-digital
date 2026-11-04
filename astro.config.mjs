@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://buatinumkm.web.id',
   trailingSlash: 'never',
-  build: { format: 'directory' },
+  build: { format: 'file' },
   integrations: [sitemap()],
 });
 // Astro config reloaded
