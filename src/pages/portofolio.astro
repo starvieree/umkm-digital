@@ -14,7 +14,7 @@ const items = (await getCollection('portfolio', (e) => !e.data.draft)).sort((a, 
   schema={items.map((e) => portfolioSchema({
     title: e.data.title,
     description: e.data.description,
-    path: `/portofolio/${e.slug}/`,
+    path: `/portofolio/${e.slug}`,
     category: e.data.category,
     pubDate: e.data.pubDate,
     image: e.data.coverImage

@@ -22,7 +22,7 @@ const {
   relatedPosts = [],
   popularPosts = [],
   section = 'Blog',
-  sectionHref = '/blog/'
+  sectionHref = '/blog'
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -281,7 +281,7 @@ const activeSchema = isBlog
                   {popularPosts.slice(0, 3).map((post: any, idx: number) => {
                     const pd = post.data;
                     return (
-                      <a href={`/blog/${post.slug}/`} class="popular-post-card">
+                      <a href={`/blog/${post.slug}`} class="popular-post-card">
                         <span class="popular-post-num">{String(idx + 1).padStart(2, '0')}</span>
                         {pd.coverImage && (
                           <div class="popular-post-thumb">
@@ -309,7 +309,7 @@ const activeSchema = isBlog
               <ul class="pkg-card-list">
                 {services.map((s) => (
                   <li class="pkg-card-item">
-                    <a href={`/layanan/${s.slug}/`} class="pkg-card-link">
+                    <a href={`/layanan/${s.slug}`} class="pkg-card-link">
                       <span class="pkg-card-check">✓</span>
                       <span class="pkg-card-name">{s.name}</span>
                       <svg class="pkg-card-arr" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 12l4-4-4-4"/></svg>
@@ -318,7 +318,7 @@ const activeSchema = isBlog
                 ))}
               </ul>
               <div class="pkg-card-actions">
-                <a href="/layanan/" class="btn btn--primary pkg-btn-primary">
+                <a href="/layanan" class="btn btn--primary pkg-btn-primary">
                   <span>Lihat Semua Paket</span>
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
@@ -372,7 +372,7 @@ const activeSchema = isBlog
     </section>
   )}
 
-  <ClosingCTA secondaryHref="/layanan/" secondaryLabel="Lihat layanan" />
+  <ClosingCTA secondaryHref="/layanan" secondaryLabel="Lihat layanan" />
 
   {/* Clipboard script */}
   {isBlog && (

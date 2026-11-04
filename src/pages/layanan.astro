@@ -41,7 +41,7 @@ const steps = [
   </div></section>
   <section class="section section--tint"><div class="container split">
     <h2>Panduan Memilih Solusi yang Tepat</h2>
-    <ul class="checklist">{guide.map(([t, slug]) => (<li>{t}: <a href={`/layanan/${slug}/`} style="color:var(--dp-color-accent)">{services.find((s) => s.slug === slug)!.name}</a></li>))}</ul>
+    <ul class="checklist">{guide.map(([t, slug]) => (<li>{t}: <a href={`/layanan/${slug}`} style="color:var(--dp-color-accent)">{services.find((s) => s.slug === slug)!.name}</a></li>))}</ul>
   </div></section>
   <section class="section"><div class="container">
     <h2 style="margin-bottom:2rem">5 Langkah Kerja yang Terarah</h2>
@@ -50,5 +50,5 @@ const steps = [
   <section class="section section--tint"><div class="container split">
     <h2>Pertanyaan Umum Seputar Layanan & Biaya</h2><FAQList items={faqs.filter((f) => ['Layanan', 'Harga'].includes(f.group))} />
   </div></section>
-  <ClosingCTA secondaryHref="/portofolio/" secondaryLabel="Lihat portofolio" />
+  <ClosingCTA secondaryHref="/portofolio" secondaryLabel="Lihat portofolio" />
 </MarketingLayout>

@@ -18,5 +18,5 @@ const groups = [...new Set(faqs.map((f) => f.group))];
     <nav aria-label="Kategori FAQ" class="tags">{groups.map((g) => <a class="tag" href={`#${g.toLowerCase()}`}>{g}</a>)}</nav>
     {groups.map((g) => (<div class="faq-group" id={g.toLowerCase()}><h2>{g}</h2><FAQList items={faqs.filter((f) => f.group === g)} /></div>))}
   </div></section>
-  <ClosingCTA title="Pertanyaan Anda Belum Terjawab di Sini?" text="Tanyakan langsung kendala atau kebutuhan bisnis Anda kepada tim konsultan kami via WhatsApp." secondaryHref="/kontak/" secondaryLabel="Halaman kontak" />
+  <ClosingCTA title="Pertanyaan Anda Belum Terjawab di Sini?" text="Tanyakan langsung kendala atau kebutuhan bisnis Anda kepada tim konsultan kami via WhatsApp." secondaryHref="/kontak" secondaryLabel="Halaman kontak" />
 </MarketingLayout>

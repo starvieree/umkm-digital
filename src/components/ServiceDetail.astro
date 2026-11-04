@@ -22,7 +22,7 @@ const steps = [
   description={s.short}
   image={`/images/services/${s.slug}.webp`}
   imageAlt={`Layanan ${s.name} untuk UMKM Jawa Timur`}
-  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Layanan', href: '/layanan/' }, { label: s.name }]}
+  breadcrumbs={[{ label: 'Beranda', href: '/' }, { label: 'Layanan', href: '/layanan' }, { label: s.name }]}
   schema={[
     serviceSchema(s),
     faqSchema(s.faqs),
@@ -37,7 +37,7 @@ const steps = [
         <p class="lead">{s.intro}</p>
         <div class="row" style="margin-top:1.75rem">
           <WhatsAppCTA message={s.waMessage} />
-          <Button href="/portofolio/" variant="secondary">Lihat portofolio</Button>
+          <Button href="/portofolio" variant="secondary">Lihat portofolio</Button>
         </div>
       </div>
       <img src={`/images/services/${s.slug}.webp`} alt={`Layanan ${s.name} untuk UMKM`} width="1200" height="800" fetchpriority="high" />
@@ -92,10 +92,10 @@ const steps = [
       <h2 style="margin-bottom:2rem">Layanan Pendukung Terkait</h2>
       <div class="matrix matrix--2">
         {related.map((r) => (
-          <article class="cell"><h3><a class="title-link" href={`/layanan/${r.slug}/`}>{r.name}</a></h3><p>{r.short}</p><a class="more" href={`/layanan/${r.slug}/`}>Pelajari layanan<span class="sr-only"> {r.name}</span></a></article>
+          <article class="cell"><h3><a class="title-link" href={`/layanan/${r.slug}`}>{r.name}</a></h3><p>{r.short}</p><a class="more" href={`/layanan/${r.slug}`}>Pelajari layanan<span class="sr-only"> {r.name}</span></a></article>
         ))}
       </div>
     </div>
   </section>
-  <ClosingCTA message={s.waMessage} secondaryHref="/portofolio/" secondaryLabel="Lihat portofolio" />
+  <ClosingCTA message={s.waMessage} secondaryHref="/portofolio" secondaryLabel="Lihat portofolio" />
 </MarketingLayout>

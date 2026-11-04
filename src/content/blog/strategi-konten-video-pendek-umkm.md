@@ -13,7 +13,7 @@ summary:
   - "Konsistensi mengunggah 3–5 konten berkualitas seminggu jauh lebih menentukan keberhasilan dibandingkan membeli kamera mahal."
 ---
 
-Di era konsumsi media digital saat ini, format video pendek vertikal di platform seperti TikTok, Instagram Reels, dan YouTube Shorts telah menjadi saluran promosi paling efektif bagi pelaku Usaha Mikro, Kecil, dan Menengah (UMKM). Jika Anda membutuhkan pendampingan konsep hingga penyuntingan materi, kami menyediakan [paket jasa video pendek UMKM](/layanan/jasa-video-pendek/) yang siap pakai. Video berdurasi 15 hingga 60 detik mampu menyampaikan pesan produk secara visual, cepat, dan menggugah minat beli seketika.
+Di era konsumsi media digital saat ini, format video pendek vertikal di platform seperti TikTok, Instagram Reels, dan YouTube Shorts telah menjadi saluran promosi paling efektif bagi pelaku Usaha Mikro, Kecil, dan Menengah (UMKM). Jika Anda membutuhkan pendampingan konsep hingga penyuntingan materi, kami menyediakan [paket jasa video pendek UMKM](/layanan/jasa-video-pendek) yang siap pakai. Video berdurasi 15 hingga 60 detik mampu menyampaikan pesan produk secara visual, cepat, dan menggugah minat beli seketika.
 
 Banyak pemilik usaha ragu memulai karena merasa belum memiliki peralatan kamera canggih atau studio profesional. Padahal, algoritma media sosial dan audiens masa kini justru lebih menyukai konten yang natural, jujur, dan memperlihatkan kerja keras nyata di balik sebuah produk lokal. Konsumen modern lebih tergerak oleh cerita autentik di balik layar daripada iklan studio formal yang kaku.
 
@@ -22,7 +22,7 @@ Banyak pemilik usaha ragu memulai karena merasa belum memiliki peralatan kamera 
 Mengapa video pendek jauh lebih unggul dibandingkan gambar statis biasa? Berikut adalah faktor-faktor utamanya:
 
 - **Daya Jangkau Organik Tanpa Batas**: Algoritma TikTok dan Reels mendistribusikan konten berdasarkan minat penonton, bukan semata-mata jumlah pengikut akun. Akun baru dengan 10 pengikut tetap berpeluang ditonton puluhan ribu orang jika videonya menarik.
-- **Membangun Kedekatan Emosional**: Pembeli merasa lebih dekat saat melihat langsung siapa sosok di balik produk yang mereka gunakan sehari-hari, terlebih jika dipadukan dengan strategi [pengelolaan media sosial bisnis](/layanan/pengelolaan-media-sosial/) yang konsisten.
+- **Membangun Kedekatan Emosional**: Pembeli merasa lebih dekat saat melihat langsung siapa sosok di balik produk yang mereka gunakan sehari-hari, terlebih jika dipadukan dengan strategi [pengelolaan media sosial bisnis](/layanan/pengelolaan-media-sosial) yang konsisten.
 - **Demonstrasi Produk Nyata**: Karakteristik produk seperti kerenyahan makanan saat digigit, kelembutan bahan pakaian saat jatuh di badan, atau cara pemakaian sabun herbal dapat langsung dibuktikan secara visual.
 - **Tingkat Retensi Tinggi**: Format singkat membuat penonton cenderung menonton ulang (*rewatch*), yang memicu sinyal rekomendasi viral dari platform.
 
@@ -50,14 +50,14 @@ Gunakan pertanyaan memancing atau visual tak biasa di awal video. Contoh: *"Kena
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/panduan-optimasi-toko-marketplace-umkm/" class="baca-juga-link">Panduan Optimasi Toko Marketplace agar Ramai Pembeli &rarr;</a>
+  <a href="/blog/panduan-optimasi-toko-marketplace-umkm" class="baca-juga-link">Panduan Optimasi Toko Marketplace agar Ramai Pembeli &rarr;</a>
 </div>
 
 ### 3. Edukasi & Pemecahan Masalah Pelanggan
 Jangan selalu berjualan langsung (*hard-selling*). Bagikan tips yang bermanfaat seputar industri Anda. Jika Anda menjual madu murni, buatlah video cara membedakan madu asli dengan madu sirup gula. Jika Anda menjual batik tulis, bagikan panduan mencuci kain agar warnanya tetap cerah puluhan tahun.
 
 ### 4. Ulasan & Reaksi Jujur Pelanggan
-Tampilkan tangkapan layar chat kepuasan pelanggan atau video kiriman dari pembeli yang menyukai produk Anda. Testimoni autentik adalah bukti sosial (*social proof*) paling kuat yang bisa diintegrasikan ke [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi/) maupun materi [iklan digital Meta Ads](/blog/tips-iklan-digital-meta-ads-umkm/).
+Tampilkan tangkapan layar chat kepuasan pelanggan atau video kiriman dari pembeli yang menyukai produk Anda. Testimoni autentik adalah bukti sosial (*social proof*) paling kuat yang bisa diintegrasikan ke [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi) maupun materi [iklan digital Meta Ads](/blog/tips-iklan-digital-meta-ads-umkm).
 
 ## Perbandingan Platform Video Pendek untuk UMKM
 
@@ -84,7 +84,7 @@ Anda tidak memerlukan kamera mirrorless berharga puluhan juta rupiah untuk mulai
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/tips-iklan-digital-meta-ads-umkm/" class="baca-juga-link">Tips Efektif Iklan Digital (Meta Ads & TikTok Ads) Berbiaya Rendah untuk UMKM &rarr;</a>
+  <a href="/blog/tips-iklan-digital-meta-ads-umkm" class="baca-juga-link">Tips Efektif Iklan Digital (Meta Ads & TikTok Ads) Berbiaya Rendah untuk UMKM &rarr;</a>
 </div>
 
 ## Alur Mengubah Penonton Video Menjadi Pembeli (Funneling)

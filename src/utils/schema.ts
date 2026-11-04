@@ -158,11 +158,11 @@ export const serviceSchema = (s: {
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': absUrl(`/layanan/${s.slug}/#service`),
+  '@id': absUrl(`/layanan/${s.slug}#service`),
   name: s.name,
   headline: s.headline,
   description: s.short,
-  url: absUrl(`/layanan/${s.slug}/`),
+  url: absUrl(`/layanan/${s.slug}`),
   provider: {
     '@id': `${site.url}/#localbusiness`
   },

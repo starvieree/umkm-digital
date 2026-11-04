@@ -17,7 +17,7 @@ Banyak pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) merasa sudah cukup puas ke
 
 Mulai dari perubahan algoritma penayangan yang membuat jangkauan konten anjlok mendadak, kenaikan persentase komisi transaksi yang kian menggerus margin laba bersih, persaingan banting harga di halaman pencarian, hingga risiko pemblokiran akun sepihak tanpa jalur banding yang jelas. Di sinilah website resmi berperan bukan sebagai pelengkap gengsi, melainkan aset digital fundamental yang memberikan kendali penuh atas reputasi, data pembeli, dan masa depan usaha Anda.
 
-Melalui [layanan pembuatan website bisnis profesional](/layanan/jasa-pembuatan-website/), UMKM kini dapat memiliki kantor digital yang beroperasi 24 jam sehari, memuat informasi produk secara transparan, serta langsung terhubung ke WhatsApp tanpa potongan transaksi per penjualan.
+Melalui [layanan pembuatan website bisnis profesional](/layanan/jasa-pembuatan-website), UMKM kini dapat memiliki kantor digital yang beroperasi 24 jam sehari, memuat informasi produk secara transparan, serta langsung terhubung ke WhatsApp tanpa potongan transaksi per penjualan.
 
 ## 5 Keuntungan Strategis Website Resmi bagi UMKM
 
@@ -31,12 +31,12 @@ Kredibilitas ini krusial saat UMKM ingin melayani pesanan partai besar (B2B), pe
 ### 2. Bebas Sepenuhnya dari Potongan Biaya Komisi Marketplace
 Biaya administrasi dan komisi marketplace saat ini berkisar 5% hingga 12% per transaksi, belum termasuk program gratis ongkir ekstra. Bagi produk dengan margin tipis seperti kuliner kemasan dan fesyen lokal, potongan ini mengikis keuntungan secara signifikan.
 
-Dengan website resmi, transaksi yang masuk melalui transfer bank langsung, QRIS, atau payment gateway hanya dikenakan biaya pemrosesan standar (umumnya di bawah 1%). Selisih margin yang diselamatkan dapat digunakan untuk meningkatkan stok atau membiayai promosi. Website Anda juga tetap bisa menyertakan opsi tautan ke [toko marketplace resmi Anda](/blog/panduan-optimasi-toko-marketplace-umkm/) bagi pembeli yang menginginkan proteksi aplikasi.
+Dengan website resmi, transaksi yang masuk melalui transfer bank langsung, QRIS, atau payment gateway hanya dikenakan biaya pemrosesan standar (umumnya di bawah 1%). Selisih margin yang diselamatkan dapat digunakan untuk meningkatkan stok atau membiayai promosi. Website Anda juga tetap bisa menyertakan opsi tautan ke [toko marketplace resmi Anda](/blog/panduan-optimasi-toko-marketplace-umkm) bagi pembeli yang menginginkan proteksi aplikasi.
 
 ### 3. Kepemilikan Database Pelanggan Mandiri (CRM)
 Saat bertransaksi di marketplace, data nomor WhatsApp dan kontak asli pembeli disamarkan oleh sistem aplikasi. Akibatnya, Anda tidak dapat menghubungi kembali pembeli lama untuk menawarkan varian baru atau promo khusus pelanggan setia.
 
-Transaksi lewat website memungkinkan Anda mencatat database pelanggan secara mandiri dan legal. Anda dapat menyapa kembali pelanggan via WhatsApp berkala atau menargetkan [iklan digital Meta Ads berbiaya rendah](/blog/tips-iklan-digital-meta-ads-umkm/) kepada audiens yang sudah mengenal produk Anda, menghasilkan konversi yang jauh lebih tinggi.
+Transaksi lewat website memungkinkan Anda mencatat database pelanggan secara mandiri dan legal. Anda dapat menyapa kembali pelanggan via WhatsApp berkala atau menargetkan [iklan digital Meta Ads berbiaya rendah](/blog/tips-iklan-digital-meta-ads-umkm) kepada audiens yang sudah mengenal produk Anda, menghasilkan konversi yang jauh lebih tinggi.
 
 ### 4. Mendominasi Pencarian Google Lokal (Local SEO)
 Ketika konsumen mencari *"catering harian kantor Surabaya"* atau *"supplier keripik tempe Malang"*, saluran utama yang mereka gunakan adalah Google Search. Website yang dioptimasi dengan Local SEO akan muncul di halaman pertama Google Maps dan pencarian organik. Ini menjadi pintu masuk otomatis bagi calon pembeli yang siap bertransaksi.
@@ -58,7 +58,7 @@ Di media sosial atau marketplace, calon pembeli sangat mudah teralihkan oleh pro
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/panduan-optimasi-toko-marketplace-umkm/" class="baca-juga-link">Panduan Optimasi Toko Marketplace agar Ramai Pembeli &rarr;</a>
+  <a href="/blog/panduan-optimasi-toko-marketplace-umkm" class="baca-juga-link">Panduan Optimasi Toko Marketplace agar Ramai Pembeli &rarr;</a>
 </div>
 
 ## Perbandingan Saluran Pemasaran Digital UMKM
@@ -89,7 +89,7 @@ Website UMKM tidak membutuhkan sistem rumit yang mahal. Fokus utama terletak pad
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/strategi-konten-video-pendek-umkm/" class="baca-juga-link">Strategi Konten Video Pendek untuk Tingkatkan Penjualan UMKM &rarr;</a>
+  <a href="/blog/strategi-konten-video-pendek-umkm" class="baca-juga-link">Strategi Konten Video Pendek untuk Tingkatkan Penjualan UMKM &rarr;</a>
 </div>
 
 ## Langkah Praktis Memulai Website Bisnis bagi Pemula

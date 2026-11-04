@@ -13,7 +13,7 @@ summary:
   - "Format video demonstrasi produk autentik (UGC) menghasilkan biaya per klik (CPC) 40% lebih murah dibanding gambar promosi formal."
 ---
 
-Banyak pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) menganggap bahwa beriklan di Meta Ads (Facebook & Instagram) atau TikTok Ads membutuhkan modal puluhan juta rupiah. Anggapan keliru ini sering kali membuat pengusaha kecil urung memanfaatkan kekuatan pemasaran berbayar (*paid traffic*), padahal algoritma periklanan digital saat ini sangat fleksibel dan ramah anggaran mikro. Bagi pemilik bisnis yang ingin beriklan secara terukur tanpa repot mengelola teknis, kami menyediakan [layanan jasa iklan digital UMKM](/layanan/jasa-iklan-digital/) dengan laporan performa berkala.
+Banyak pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) menganggap bahwa beriklan di Meta Ads (Facebook & Instagram) atau TikTok Ads membutuhkan modal puluhan juta rupiah. Anggapan keliru ini sering kali membuat pengusaha kecil urung memanfaatkan kekuatan pemasaran berbayar (*paid traffic*), padahal algoritma periklanan digital saat ini sangat fleksibel dan ramah anggaran mikro. Bagi pemilik bisnis yang ingin beriklan secara terukur tanpa repot mengelola teknis, kami menyediakan [layanan jasa iklan digital UMKM](/layanan/jasa-iklan-digital) dengan laporan performa berkala.
 
 Dengan strategi pengujian (*A/B testing*) yang tepat dan penentuan target audiens yang spesifik, UMKM dapat menjangkau ribuan calon pembeli potensial di sekitar lokasi usaha hanya dengan modal Rp25.000 hingga Rp50.000 per hari. Kuncinya bukan pada seberapa besar anggaran yang Anda bakar, melainkan ketepatan pesan promosi, daya tarik materi kreatif, dan kesiapan admin dalam mengonversi pesan chat menjadi transaksi penjualan nyata.
 
@@ -41,11 +41,11 @@ Jika Anda menjual produk kuliner kemasan siap saji, kue basah, busana muslim, at
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/strategi-konten-video-pendek-umkm/" class="baca-juga-link">Strategi Konten Video Pendek untuk Tingkatkan Penjualan UMKM &rarr;</a>
+  <a href="/blog/strategi-konten-video-pendek-umkm" class="baca-juga-link">Strategi Konten Video Pendek untuk Tingkatkan Penjualan UMKM &rarr;</a>
 </div>
 
 ### 3. Gunakan Format Video Autentik (User-Generated Content)
-Poster grafis formal yang dipenuhi teks kaku sering kali diabaikan oleh pengguna media sosial karena langsung terdeteksi sebagai iklan yang mengganggu. Sebaliknya, video vertikal berdurasi 15 hingga 20 detik yang memperlihatkan tekstur makanan secara dekat, suara renyah gigitan (*crispy sound*), atau rekaman pelanggan asli yang sedang tersenyum mencoba produk terbukti 3 kali lipat lebih memikat. Anda dapat memadukannya dengan [panduan strategi konten video pendek UMKM](/blog/strategi-konten-video-pendek-umkm/) untuk materi promosi yang segar.
+Poster grafis formal yang dipenuhi teks kaku sering kali diabaikan oleh pengguna media sosial karena langsung terdeteksi sebagai iklan yang mengganggu. Sebaliknya, video vertikal berdurasi 15 hingga 20 detik yang memperlihatkan tekstur makanan secara dekat, suara renyah gigitan (*crispy sound*), atau rekaman pelanggan asli yang sedang tersenyum mencoba produk terbukti 3 kali lipat lebih memikat. Anda dapat memadukannya dengan [panduan strategi konten video pendek UMKM](/blog/strategi-konten-video-pendek-umkm) untuk materi promosi yang segar.
 
 ### 4. Terapkan Anggaran Uji Coba Terukur Selama 3–5 Hari
 Mulailah dengan anggaran harian Rp30.000 hingga Rp50.000 per set iklan. Jalankan selama minimal 3 hingga 5 hari tanpa mengubah pengaturan apa pun. Periode ini krusial agar algoritma periklanan dapat menyelesaikan fase pembelajaran (*learning phase*) dan menemukan profil pengguna yang paling responsif terhadap produk Anda.
@@ -72,11 +72,11 @@ Agar biaya promosi Anda tidak terbuang sia-sia, waspadai 4 kekeliruan mendasar y
 - **Hanya Menekan Tombol "Boost Post" di Aplikasi Ponsel**: Fitur promosi instan bawaan aplikasi ponsel memiliki opsi penyaringan audiens yang sangat terbatas. Gunakan selalu *Meta Ads Manager* melalui peramban komputer agar Anda dapat mengatur demografi usia, minat perilaku, hingga pengecualian audiens secara presisi.
 - **Mengubah Pengaturan Iklan Terlalu Cepat**: Algoritma membutuhkan waktu minimal 48 hingga 72 jam untuk menstabilkan penayangan. Mematikan atau mengubah teks iklan hanya karena belum ada pesan masuk dalam 6 jam pertama akan mereset proses pembelajaran algoritma dari nol.
 - **Admin WhatsApp Lambat Merespons Pesan Masuk**: Calon pembeli yang mengeklik iklan berada dalam kondisi antusiasme puncak. Jika admin baru membalas pesan 2 jam kemudian, calon pembeli sudah beralih ke toko lain atau kehilangan minat berbelanja.
-- **Halaman Profil Tidak Meyakinkan**: Pastikan link profil Anda mengarah ke [toko marketplace yang rapi](/blog/panduan-optimasi-toko-marketplace-umkm/) atau [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi/) dengan ulasan positif agar calon pembeli merasa aman bertransaksi.
+- **Halaman Profil Tidak Meyakinkan**: Pastikan link profil Anda mengarah ke [toko marketplace yang rapi](/blog/panduan-optimasi-toko-marketplace-umkm) atau [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi) dengan ulasan positif agar calon pembeli merasa aman bertransaksi.
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/mengapa-umkm-butuh-website-resmi/" class="baca-juga-link">Mengapa Bisnis UMKM Butuh Website Resmi di Era Digital &rarr;</a>
+  <a href="/blog/mengapa-umkm-butuh-website-resmi" class="baca-juga-link">Mengapa Bisnis UMKM Butuh Website Resmi di Era Digital &rarr;</a>
 </div>
 
 ## SOP Layanan Admin WhatsApp Pengonversi Pesanan Iklan

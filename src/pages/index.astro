@@ -53,7 +53,7 @@ const why = [
         <p class="lead">Tingkatkan penjualan dan jangkauan pelanggan lewat video pendek, optimasi SEO & penulisan artikel, hosting cepat, media sosial, iklan berbayar, hingga website profil. Sesuai kebutuhan usaha, transparan, dan tanpa biaya siluman.</p>
         <div class="row">
           <WhatsAppCTA />
-          <Button href="/layanan/" variant="secondary">Lihat layanan</Button>
+          <Button href="/layanan" variant="secondary">Lihat layanan</Button>
         </div>
         <p class="hero-note">Konsultasi santai via WhatsApp untuk menemukan solusi yang paling pas dengan budget Anda.</p>
       </div>
@@ -79,7 +79,7 @@ const why = [
       <h2>Kendala Pemasaran yang Siap Kami Bantu Selesaikan</h2>
       <div class="matrix matrix--2">
         {problems.map(([t, d, slug]) => (
-          <article class="cell"><h3>{t}</h3><p>{d}</p><a class="more" href={`/layanan/${slug}/`}>Lihat solusinya<span class="sr-only"> untuk {t}</span></a></article>
+          <article class="cell"><h3>{t}</h3><p>{d}</p><a class="more" href={`/layanan/${slug}`}>Lihat solusinya<span class="sr-only"> untuk {t}</span></a></article>
         ))}
       </div>
     </div>
@@ -101,7 +101,7 @@ const why = [
 
   <section class="section section--tint">
     <div class="container">
-      <div class="section-head"><h2>Hasil Pekerjaan Nyata</h2><Button href="/portofolio/" variant="text" arrow>Lihat semua portofolio</Button></div>
+      <div class="section-head"><h2>Hasil Pekerjaan Nyata</h2><Button href="/portofolio" variant="text" arrow>Lihat semua portofolio</Button></div>
       {projects.length ? (<div class="matrix">{projects.map((e) => <PortfolioCard entry={e} />)}</div>) : (<p class="empty">Portofolio sedang disiapkan. Kami hanya menampilkan pekerjaan nyata yang sudah mendapat izin publikasi.</p>)}
     </div>
   </section>
@@ -120,7 +120,7 @@ const why = [
           <p class="eyebrow">Wawasan & Panduan</p>
           <h2>Artikel & Tips Bisnis Digital</h2>
         </div>
-        <Button href="/blog/" variant="text" arrow>Lihat semua artikel</Button>
+        <Button href="/blog" variant="text" arrow>Lihat semua artikel</Button>
       </div>
       <div class="blog-grid">
         {posts.map((post) => <ArticleCard entry={post} />)}
@@ -130,7 +130,7 @@ const why = [
 
   <section class="section">
     <div class="container split">
-      <div><h2>Pertanyaan Seputar Layanan Kami</h2><div style="margin-top:1.5rem"><Button href="/faq/" variant="secondary">Lihat semua FAQ</Button></div></div>
+      <div><h2>Pertanyaan Seputar Layanan Kami</h2><div style="margin-top:1.5rem"><Button href="/faq" variant="secondary">Lihat semua FAQ</Button></div></div>
       <FAQList items={faqs.slice(0, 5)} />
     </div>
   </section>

@@ -8,7 +8,7 @@ const d = entry.data;
   {
     d.coverImage && (
       <a
-        href={`/blog/${entry.slug}/`}
+        href={`/blog/${entry.slug}`}
         class="blog-card-img-wrap"
         tabindex="-1"
         aria-hidden="true"
@@ -36,10 +36,10 @@ const d = entry.data;
     <time datetime={d.pubDate.toISOString()}>{formatDate(d.pubDate)}</time>
   </div>
   <h3 class="blog-title">
-    <a class="title-link" href={`/blog/${entry.slug}/`}>{d.title}</a>
+    <a class="title-link" href={`/blog/${entry.slug}`}>{d.title}</a>
   </h3>
   <p class="blog-desc">{d.description}</p>
-  <a href={`/blog/${entry.slug}/`} class="blog-btn-more">
+  <a href={`/blog/${entry.slug}`} class="blog-btn-more">
     <span>Baca Selengkapnya</span>
     <svg
       width="14"

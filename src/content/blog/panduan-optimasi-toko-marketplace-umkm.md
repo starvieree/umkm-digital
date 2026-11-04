@@ -17,7 +17,7 @@ Platform lokapasar (*marketplace*) seperti Shopee, Tokopedia, dan Lazada menyedi
 
 Banyak pemilik toko UMKM terjebak dalam perang harga murah (*price war*), mengorbankan margin laba bersih demi pesanan pertama. Padahal banting harga bukanlah strategi berkelanjutan. Konsumen marketplace saat ini tidak hanya mencari harga termurah, melainkan kejelasan informasi produk, kualitas foto yang meyakinkan, kecepatan pelayanan admin, dan reputasi ulasan toko yang solid.
 
-Jika Anda tidak memiliki waktu luang untuk mengelola detail teknis ini, kami menyediakan [layanan jasa pembuatan website katalog digital](/layanan/jasa-pembuatan-website/) serta strategi digital yang siap membantu penataan usaha secara menyeluruh. Bagi Anda yang ingin mengelolanya secara mandiri, panduan terstruktur berikut membedah langkah optimasi toko dari nol hingga menghasilkan penjualan konsisten.
+Jika Anda tidak memiliki waktu luang untuk mengelola detail teknis ini, kami menyediakan [layanan jasa pembuatan website katalog digital](/layanan/jasa-pembuatan-website) serta strategi digital yang siap membantu penataan usaha secara menyeluruh. Bagi Anda yang ingin mengelolanya secara mandiri, panduan terstruktur berikut membedah langkah optimasi toko dari nol hingga menghasilkan penjualan konsisten.
 
 ## 4 Pondasi Optimasi Katalog Produk Marketplace (SEO Toko)
 
@@ -57,7 +57,7 @@ Foto produk adalah faktor penentu pertama apakah calon pembeli akan mengeklik pr
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/mengapa-umkm-butuh-website-resmi/" class="baca-juga-link">Mengapa Bisnis UMKM Butuh Website Resmi di Era Digital &rarr;</a>
+  <a href="/blog/mengapa-umkm-butuh-website-resmi" class="baca-juga-link">Mengapa Bisnis UMKM Butuh Website Resmi di Era Digital &rarr;</a>
 </div>
 
 ### 3. Copywriting Deskripsi Produk dengan Struktur 3 Babak
@@ -67,7 +67,7 @@ Jangan biarkan kolom deskripsi kosong atau hanya memuat satu kalimat pendek. Sus
 - **Babak 3 (Keamanan Pengiriman):** Beritahukan bahwa setiap paket dibungkus bubble wrap tebal, jadwal pengiriman harian, dan syarat video unboxing untuk klaim retur.
 
 ### 4. Pengaturan Varian Produk yang Presisi
-Jika produk memiliki ragam warna, ukuran, atau rasa, pisahkan dalam menu varian resmi marketplace. Sertakan foto thumbnail kecil pada setiap varian. Jangan menggabungkan barang berharga Rp20.000 dengan barang Rp150.000 dalam satu link produk demi memancing klik palsu, karena praktik ini melanggar kebijakan marketplace dan menurunkan peringkat toko Anda. Lengkapi katalog dengan [video pendek unboxing produk](/blog/strategi-konten-video-pendek-umkm/) pada slide pertama.
+Jika produk memiliki ragam warna, ukuran, atau rasa, pisahkan dalam menu varian resmi marketplace. Sertakan foto thumbnail kecil pada setiap varian. Jangan menggabungkan barang berharga Rp20.000 dengan barang Rp150.000 dalam satu link produk demi memancing klik palsu, karena praktik ini melanggar kebijakan marketplace dan menurunkan peringkat toko Anda. Lengkapi katalog dengan [video pendek unboxing produk](/blog/strategi-konten-video-pendek-umkm) pada slide pertama.
 
 ## Tolok Ukur & Metrik Evaluasi Kinerja Toko Marketplace
 
@@ -91,11 +91,11 @@ Setelah katalog tertata rapi, langkah berikutnya adalah memaksimalkan fitur prom
 - **Voucher Ikuti Toko (Follower Voucher):** Pasang voucher potongan belanja nominal kecil (misalnya diskon Rp3.000 minimal belanja Rp50.000) untuk mengubah pengunjung toko menjadi pengikut aktif.
 - **Paket Diskon Kombo (Bundling Hemat):** Pasangkan produk terlaris dengan produk pelengkap, misalnya membeli sambal botol gratis kerupuk mini. Strategi ini terbukti mendongkrak rata-rata nilai belanja per pembeli (*Average Order Value*).
 - **Aktifkan Seluruh Program Gratis Ongkir:** Program gratis ongkir bersubsidi merupakan faktor psikologis nomor satu penentu transaksi online di Indonesia. Pastikan toko terdaftar resmi dalam program gratis ongkir ekstra platform.
-- **Manfaatkan Fitur Live Streaming Commerce:** Melakukan siaran langsung minimal 1 jam sehari saat jam makan siang atau malam hari terbukti meningkatkan penjualan, terutama jika dipadukan dengan strategi promosi [video pendek kreatif](/layanan/jasa-video-pendek/).
+- **Manfaatkan Fitur Live Streaming Commerce:** Melakukan siaran langsung minimal 1 jam sehari saat jam makan siang atau malam hari terbukti meningkatkan penjualan, terutama jika dipadukan dengan strategi promosi [video pendek kreatif](/layanan/jasa-video-pendek).
 
 <div class="baca-juga-box">
   <span class="baca-juga-badge">Baca Juga:</span>
-  <a href="/blog/tips-iklan-digital-meta-ads-umkm/" class="baca-juga-link">Tips Efektif Iklan Digital (Meta Ads & TikTok Ads) Berbiaya Rendah untuk UMKM &rarr;</a>
+  <a href="/blog/tips-iklan-digital-meta-ads-umkm" class="baca-juga-link">Tips Efektif Iklan Digital (Meta Ads & TikTok Ads) Berbiaya Rendah untuk UMKM &rarr;</a>
 </div>
 
 ## Cara Menjaga Badge Star Seller dan Reputasi Toko
@@ -130,7 +130,7 @@ Mendapatkan status Star Seller memberikan dorongan psikologis yang besar bagi pe
   <details class="article-faq-item">
     <summary class="faq-summary-q">Apakah toko marketplace perlu disandingkan dengan website resmi bisnis?</summary>
     <div class="faq-summary-a">
-      Keduanya saling melengkapi secara sinergis. Marketplace sangat bagus untuk menjaring pembeli baru yang mencari produk lewat aplikasi, sedangkan [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi/) berperan sebagai markas reputasi utama untuk transaksi partai besar (B2B) dan pembeli langganan yang ingin bebas dari biaya layanan aplikasi.
+      Keduanya saling melengkapi secara sinergis. Marketplace sangat bagus untuk menjaring pembeli baru yang mencari produk lewat aplikasi, sedangkan [website resmi bisnis](/blog/mengapa-umkm-butuh-website-resmi) berperan sebagai markas reputasi utama untuk transaksi partai besar (B2B) dan pembeli langganan yang ingin bebas dari biaya layanan aplikasi.
     </div>
   </details>
 </div>
