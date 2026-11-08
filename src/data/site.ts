@@ -9,6 +9,7 @@ export const site = {
   phone: '+6288989643555',
   email: 'halo@buatinumkm.web.id',
   address: 'Surabaya, Jawa Timur, Indonesia',
+  streetAddress: 'Surabaya',
   city: 'Surabaya',
   region: 'Jawa Timur',
   country: 'ID',

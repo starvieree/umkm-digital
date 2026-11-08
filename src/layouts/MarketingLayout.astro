@@ -5,7 +5,19 @@ import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { breadcrumbSchema } from '../utils/schema';
 const { breadcrumbs, schema = [], ...rest } = Astro.props;
-const all = breadcrumbs ? [...schema, breadcrumbSchema(breadcrumbs)] : schema;
+
+let currentPath = Astro.url.pathname;
+if (currentPath.endsWith('.html')) {
+  currentPath = currentPath.slice(0, -5);
+}
+if (currentPath === '/index') {
+  currentPath = '/';
+}
+if (currentPath.length > 1 && currentPath.endsWith('/')) {
+  currentPath = currentPath.slice(0, -1);
+}
+
+const all = breadcrumbs ? [...schema, breadcrumbSchema(breadcrumbs, currentPath)] : schema;
 ---
 <BaseLayout {...rest} schema={all}>
   <Header />

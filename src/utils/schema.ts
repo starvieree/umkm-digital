@@ -32,11 +32,13 @@ export const organizationSchema = () => ({
     url: absUrl('/favicon.svg'),
     caption: `${site.name} Logo`
   },
+  image: absUrl('/og/default.webp'),
   description: site.description,
   email: site.email,
   telephone: site.phone,
   address: {
     '@type': 'PostalAddress',
+    streetAddress: site.streetAddress || site.address,
     addressLocality: site.city,
     addressRegion: site.region,
     postalCode: site.postalCode,
@@ -83,6 +85,7 @@ export const localBusinessSchema = () => ({
   ],
   address: {
     '@type': 'PostalAddress',
+    streetAddress: site.streetAddress || site.address,
     addressLocality: site.city,
     addressRegion: site.region,
     postalCode: site.postalCode,
@@ -123,15 +126,22 @@ export const websiteSchema = () => ({
 });
 
 // Breadcrumbs Schema
-export const breadcrumbSchema = (items: { label: string; href?: string }[]) => ({
+export const breadcrumbSchema = (
+  items: { label: string; href?: string }[],
+  fallbackLastUrl?: string
+) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map((it, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: it.label,
-    ...(it.href ? { item: absUrl(it.href) } : {})
-  }))
+  itemListElement: items.map((it, i) => {
+    const isLast = i === items.length - 1;
+    const url = it.href || (isLast && fallbackLastUrl ? fallbackLastUrl : undefined);
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.label,
+      ...(url ? { item: absUrl(url) } : {})
+    };
+  })
 });
 
 // FAQ Page Schema (Core for AEO - Answer Engine Optimization)
@@ -163,8 +173,23 @@ export const serviceSchema = (s: {
   headline: s.headline,
   description: s.short,
   url: absUrl(`/layanan/${s.slug}`),
+  image: absUrl(`/images/services/${s.slug}.webp`),
   provider: {
-    '@id': `${site.url}/#localbusiness`
+    '@type': 'ProfessionalService',
+    '@id': `${site.url}/#localbusiness`,
+    name: site.name,
+    url: site.url,
+    telephone: site.phone,
+    image: absUrl('/og/default.webp'),
+    priceRange: site.priceRange,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.streetAddress || site.address,
+      addressLocality: site.city,
+      addressRegion: site.region,
+      postalCode: site.postalCode,
+      addressCountry: site.country
+    }
   },
   areaServed: {
     '@type': 'AdministrativeArea',
@@ -206,13 +231,22 @@ export const articleSchema = (a: {
   author: {
     '@type': 'Person',
     name: a.author || 'Ainur Reza',
+    url: absUrl('/tentang-kami'),
     jobTitle: 'Lead Digital Marketing Consultant',
     worksFor: {
       '@id': `${site.url}/#organization`
     }
   },
   publisher: {
-    '@id': `${site.url}/#organization`
+    '@type': 'Organization',
+    '@id': `${site.url}/#organization`,
+    name: site.name,
+    url: site.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: absUrl('/favicon.svg'),
+      caption: `${site.name} Logo`
+    }
   },
   // Speakable schema allows voice assistants and AI engines to identify direct summary answers
   speakable: {
@@ -240,7 +274,10 @@ export const portfolioSchema = (p: {
   dateCreated: (p.pubDate ? p.pubDate.toISOString() : new Date().toISOString()),
   genre: p.category,
   creator: {
-    '@id': `${site.url}/#organization`
+    '@type': 'Organization',
+    '@id': `${site.url}/#organization`,
+    name: site.name,
+    url: site.url
   },
   image: p.image ? absUrl(p.image) : absUrl('/og/default.webp')
 });
@@ -251,10 +288,12 @@ export const personSchema = (person: {
   role: string;
   bio: string;
   image: string;
+  url?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: person.name,
+  url: person.url || absUrl('/tentang-kami'),
   jobTitle: person.role,
   description: person.bio,
   image: absUrl(person.image),
